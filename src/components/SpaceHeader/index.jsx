@@ -1,11 +1,16 @@
-import { StyledHeader } from "./styled";
+import { StyledHeader, StyledLogo } from "./styled";
 import logo from "../../assets/shared/logo.svg"
 import { Link } from "react-router-dom";
+import { useScreenWidth } from "../../utils";
+import { List } from "phosphor-react";
 
 const SpaceHeader =()=> {
+  const screenWidth = useScreenWidth();
+
   return (
     <StyledHeader>
-      <img src={logo} alt="logo"/>
+      <StyledLogo src={logo} alt="logo" />
+      <List color="white" size={32} />
       <nav>
         <ol>
           <li><Link to="/">Home</Link></li>

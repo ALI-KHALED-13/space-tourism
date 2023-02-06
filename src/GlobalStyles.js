@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import backgrounds from "./assets/backgrounds";
+import { mediaQuery } from "./utils";
 
 export default createGlobalStyle`
   * {
@@ -17,6 +19,20 @@ export default createGlobalStyle`
     font-size: 62.5%;
     scroll-behavior: smooth;
   }
+  body {
+    min-height: 100vh;
+    background-image: url(${( { page })=> backgrounds[page].mobile});
+    background-color: ${({theme: {colors}})=> colors.spaceBlack};
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    ${mediaQuery("md")}{
+      background-image: url(${( { page })=> backgrounds[page].tablet});
+    }
+    ${mediaQuery("lg")}{
+      background-image: url(${( { page })=> backgrounds[page].desktop});
+    }
+  }
   button {
     background: none;
     border: none;
@@ -32,3 +48,4 @@ export const colors = {
   spaceGrey: "#616476",
   spaceBlue: "#D0D6F9",
 }
+
