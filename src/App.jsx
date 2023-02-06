@@ -1,29 +1,31 @@
 import { useState } from 'react'
+import { Routes, Route} from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+import SpaceHeader from './components/SpaceHeader'
+import { colors } from './GlobalStyles';
+import { Crew } from './pages/Crew';
+import { Destination } from './pages/Destination';
+import { Home } from './pages/Home';
+import { Technology } from './pages/Technology';
 
+/*
+- to do:
+ React lazy and suspnse
+*/
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <ThemeProvider theme={{colors}}>
+      <SpaceHeader />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/destination" element={<Destination />}/>
+        <Route path="/crew" element={<Crew />}/>
+        <Route path="/technology" element={<Technology />}/>
+      </Routes>      
+    </ThemeProvider>
   )
 }
 

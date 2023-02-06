@@ -16,9 +16,6 @@ export default createGlobalStyle`
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    --spaceBlack: #0B0D17;
-    --spaceGrey: #616476;
-    --spaceBlue: #D0D6F9;
   }
   button {
     background: none;
@@ -29,3 +26,9 @@ export default createGlobalStyle`
     font-family: 'Bellefair', serif;
   }
 `;
+
+export const colors = {
+  spaceBlack: "#0B0D17",
+  spaceGrey: "#616476",
+  spaceBlue: "#D0D6F9",
+}
