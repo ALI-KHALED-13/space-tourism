@@ -1,24 +1,21 @@
 import { StyledHeader, StyledLogo } from "./styled";
 import logo from "../../assets/shared/logo.svg"
-import { Link } from "react-router-dom";
+
 import { useScreenWidth } from "../../utils";
-import { List } from "phosphor-react";
+import { MobileNav } from "./comps/MboileNav";
 
 const SpaceHeader =()=> {
   const screenWidth = useScreenWidth();
-
+  const navLinks = [
+    {to:"/", display:"Home"},
+    {to:"/destination", display:"Destination"},
+    {to:"/crew", display:"Crew"},
+    {to:"/technology", display:"Technology"},
+  ];
   return (
     <StyledHeader>
       <StyledLogo src={logo} alt="logo" />
-      <List color="white" size={32} />
-      <nav>
-        <ol>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/destination">Destination</Link></li>
-          <li><Link to="/crew">Crew</Link></li>
-          <li><Link to="/technology">Technology</Link></li>
-        </ol>
-      </nav>
+      <MobileNav navLinks={navLinks}/>
     </StyledHeader>
   );
 }

@@ -8,6 +8,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Barlow Condensed', sans-serif;
+    color: white;
   }
   *::-webkit-scrollbar {
     width: 0.5rem;
