@@ -31,10 +31,10 @@ export const StyledNavList = styled.ol`
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   display: block;
-  padding: 4rem 0.5rem;
+  padding: 4rem 0.2rem;
   cursor: pointer;
   text-transform: uppercase;
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
   }
 `;
