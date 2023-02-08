@@ -1,7 +1,6 @@
 
 import { List } from "phosphor-react";
-import { StyledNavList, StyledNavMenu, StyledXSign, StyledNavLink} from "./styled";
-
+import {StyledNavMenu, StyledXSign, StyledNavLink, StyledNavList} from "./styled";
 import { useState } from "react";
 
 

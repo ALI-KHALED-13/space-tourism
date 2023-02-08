@@ -9,6 +9,9 @@ export const StyledHeader = styled.header`
   align-items: center;
   padding: 2.4rem;
   color: ${({ theme : {colors}})=> colors.spaceWhite};
+  ${mediaQuery("md")}{
+    padding: 0;
+  }
 `;
 
 export const StyledLogo = styled.img`
@@ -17,6 +20,7 @@ export const StyledLogo = styled.img`
   ${mediaQuery("md")}{
     width: 4.8rem;
     height: 4.8rem;
+    margin-left: 4rem;
   }
 `;
 

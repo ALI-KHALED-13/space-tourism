@@ -1,21 +1,26 @@
 import { StyledHeader, StyledLogo } from "./styled";
 import logo from "../../assets/shared/logo.svg"
 
-import { useScreenWidth } from "../../utils";
+import { getBreakPoint, useScreenWidth } from "../../utils";
 import { MobileNav } from "./comps/MboileNav";
+import { PrimaryNav } from "./comps/PrimaryNav";
 
 const SpaceHeader =()=> {
   const screenWidth = useScreenWidth();
   const navLinks = [
-    {to:"/", display:"Home"},
-    {to:"/destination", display:"Destination"},
-    {to:"/crew", display:"Crew"},
-    {to:"/technology", display:"Technology"},
+    {to:"/", display:"home"},
+    {to:"/destination", display:"destination"},
+    {to:"/crew", display:"crew"},
+    {to:"/technology", display:"technology"},
   ];
   return (
     <StyledHeader>
       <StyledLogo src={logo} alt="logo" />
-      <MobileNav navLinks={navLinks}/>
+      {screenWidth < getBreakPoint("md")?
+       <MobileNav navLinks={navLinks}/>
+       :
+       <PrimaryNav navLinks={navLinks} />
+      }
     </StyledHeader>
   );
 }

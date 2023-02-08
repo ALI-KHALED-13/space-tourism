@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 
-
-export const mediaQuery =(breakPoint)=> {
-  const breakpts = {
+export const getBreakPoint =(BPString)=> {
+  const breakpoints = {
     "md": 768,
     "lg": 1440
   }
-  return `@media only screen and (min-width: ${breakpts[breakPoint]}px)`;
+  return breakpoints[BPString]
+}
+
+export const mediaQuery =(breakPoint)=> {
+  return `@media only screen and (min-width: ${getBreakPoint(breakPoint)}px)`;
 }
 
 export const useScreenWidth =()=>{
-  const [screenWidth, setScreenWidth] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(document.documentElement.clientWidth);
 
   let timerId;
   const updateScreenWidth =()=> {
@@ -18,7 +21,7 @@ export const useScreenWidth =()=>{
     
     timerId = setTimeout(()=> {
       setScreenWidth(document.documentElement.clientWidth);
-    }, 500);
+    }, 300);
   }
 
   useEffect(()=> {
