@@ -2,6 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import backgrounds from "./assets/backgrounds";
 import { mediaQuery } from "./utils";
 
+export const colors = {
+  spaceBlack: "#0B0D17",
+  spaceGrey: "#616476",
+  spaceBlue: "#D0D6F9",
+}
+
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -11,10 +17,13 @@ export default createGlobalStyle`
     color: white;
   }
   *::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: ${colors.spaceGrey};
   }
   *::-webkit-scrollbar-thumb {
     border-radius: 1rem;
+    background-color: ${colors.spaceBlue};
   }
   html {
     font-size: 62.5%;
@@ -23,7 +32,7 @@ export default createGlobalStyle`
   body {
     min-height: 100vh;
     background-image: url(${( { page })=> backgrounds[page].mobile});
-    background-color: ${({theme: {colors}})=> colors.spaceBlack};
+    background-color: ${colors.spaceBlack};
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -44,9 +53,5 @@ export default createGlobalStyle`
   }
 `;
 
-export const colors = {
-  spaceBlack: "#0B0D17",
-  spaceGrey: "#616476",
-  spaceBlue: "#D0D6F9",
-}
+
 

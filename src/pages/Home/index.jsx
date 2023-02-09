@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Heading1, Heading5, StyledParagraph } from "../../components/Typo";
 import { StyledExploreButton, StyledSection, StyledHalo} from "./styled";
 
-export const Home =()=> {
+export const Home =({ nextPagePath })=> {
   const navigate = useNavigate();
   
   return (
@@ -20,8 +20,8 @@ export const Home =()=> {
           give you a truly out of this world experience!
         </StyledParagraph>
       </div>
-      <StyledExploreButton onClick={()=> navigate("/destination")}>
-        <StyledHalo />
+      <StyledExploreButton onClick={()=> navigate(nextPagePath)}>
+        <StyledHalo /> 
         explore
       </StyledExploreButton>
     </StyledSection>

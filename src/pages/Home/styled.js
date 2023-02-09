@@ -27,22 +27,14 @@ export const StyledSection = styled.section`
 export const StyledHalo = styled.span`
   display: inline-block;
   background-color: rgb(255,255,255, 0.1);
-  width: 15rem;
-  height: 15rem;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
   transition: all 0.3s ease-in-out;
-  ${mediaQuery("md")}{
-    width: 24rem;
-    height: 24rem; 
-  }
-  ${mediaQuery("lg")}{
-    width: 27.5rem;
-    height: 27.5rem;
-  }
 `;
 
 
@@ -58,6 +50,8 @@ export const StyledExploreButton = styled.button`
   line-height: 23px;
   color: ${({theme : {colors}})=> colors.spaceBlack};
   position: relative;
+
+
   ${mediaQuery("md")}{
     width: 24rem;
     height: 24rem; 

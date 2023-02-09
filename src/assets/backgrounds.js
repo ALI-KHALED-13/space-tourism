@@ -20,7 +20,7 @@ export default {
     tablet: homeTablet,
     desktop: homeDesktop
   },
-  destination: {
+  destinations: {
     mobile: destinationMobile,
     tablet: destinationTablet,
     desktop: destinationDesktop

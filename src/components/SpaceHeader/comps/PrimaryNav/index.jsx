@@ -5,8 +5,8 @@ export const PrimaryNav =({navLinks})=> {
     <StyledNavMenu>
       <StyledNavList>
         {navLinks.map(link=> (
-          <li key={link.to}>
-            <StyledNavLink to={link.to}>
+          <li key={link.path}>
+            <StyledNavLink to={link.path}>
               {link.display}
             </StyledNavLink>
           </li>

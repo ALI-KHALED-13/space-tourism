@@ -22,9 +22,9 @@ export const MobileNav =({navLinks})=> {
         
         <StyledNavList>
           {navLinks.map((link, idx)=> (
-            <li key={link.to} >
+            <li key={link.path} >
               <StyledNavLink
-                to={link.to}
+                to={link.path}
                 onClick={closeNavigationMenu}
               >
                 <span className="counter">

@@ -42,6 +42,7 @@ export const Heading3 = styled.h3`
   ${getBellefair()}
   line-height: 37px;
   font-size: 3.2rem;
+  margin: 1.5rem;
 
   ${mediaQuery("md")}{
     line-height: 64px;
@@ -53,6 +54,7 @@ export const Heading4 = styled.h4`
   ${getBellefair()}
   line-height: 28px;
   font-size: 2.4rem;
+  margin: 1.2rem;
 
   ${mediaQuery("md")}{
     line-height: 37px;
@@ -65,6 +67,7 @@ export const Heading5 = styled.h5`
   font-size: 16px;
   line-height: 19.2px;
   letter-spacing: 2.7px;
+  margin: 1rem;
 
   ${mediaQuery("md")}{
     font-size: 2.8rem;
@@ -77,7 +80,7 @@ export const Subheading1 = styled.h6`
   ${getBellefair()}
   font-size: 28px;
   line-height: 32px;
-
+  margin: 1rem;
 `;
 
 export const Subheading2 = styled.h6`
@@ -86,7 +89,7 @@ export const Subheading2 = styled.h6`
   line-height: 17px;
   /* identical to box height */
   letter-spacing: 2.3625px;
-
+  margin: 1rem;
 `;
 
 export const StyledParagraph = styled.p`
@@ -95,6 +98,7 @@ export const StyledParagraph = styled.p`
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
+  margin: 1.2rem;
   color: ${({color, theme: {colors}})=> color && colors[color]};
   ${mediaQuery("md")}{
     font-size: 16px;

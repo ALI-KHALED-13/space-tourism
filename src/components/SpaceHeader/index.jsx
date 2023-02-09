@@ -5,17 +5,16 @@ import { getBreakPoint, useScreenWidth } from "../../utils";
 import { MobileNav } from "./comps/MboileNav";
 import { PrimaryNav } from "./comps/PrimaryNav";
 
-const SpaceHeader =()=> {
+const SpaceHeader =({appPages})=> {
   const screenWidth = useScreenWidth();
-  const navLinks = [
-    {to:"/", display:"home"},
-    {to:"/destination", display:"destination"},
-    {to:"/crew", display:"crew"},
-    {to:"/technology", display:"technology"},
-  ];
+
+  const pagesLinks = appPages.map(page=> page.href);
+  const navLinks = [{path:"/", display:"home"}].concat(pagesLinks);
+
   return (
     <StyledHeader>
       <StyledLogo src={logo} alt="logo" />
+      
       {screenWidth < getBreakPoint("md")?
        <MobileNav navLinks={navLinks}/>
        :
