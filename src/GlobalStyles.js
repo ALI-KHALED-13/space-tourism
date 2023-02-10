@@ -35,7 +35,8 @@ export default createGlobalStyle`
     background-color: ${colors.spaceBlack};
     background-repeat: no-repeat;
     background-size: cover;
-
+    transition: background-image 0.8s linear;
+    
     ${mediaQuery("md")}{
       background-image: url(${( { page })=> backgrounds[page].tablet});
     }

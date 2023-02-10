@@ -2,23 +2,13 @@ import styled from "styled-components";
 import { mediaQuery } from "../../utils";
 
 export const StyledSection = styled.section`
-  min-height: 75vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 1rem auto;
-  gap: 2.5rem;
-  padding: 3rem;
+  & > h5 {
+    text-align: center;
+  }
   ${mediaQuery("md")}{
-    padding: 3rem 16rem;
+    text-align: left;
   }
-  ${mediaQuery("lg")}{
-    flex-direction: row;
-    align-items: flex-end;
-    padding: 5rem 16rem;
-    gap: 35rem;
-  }
+
 `;
 
 export const StyledOrder = styled.span`

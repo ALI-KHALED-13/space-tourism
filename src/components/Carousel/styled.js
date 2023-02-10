@@ -3,6 +3,8 @@ import { mediaQuery } from "../../utils";
 
 export const StyledContainer = styled.div`
   display: grid;
+  gap: 3rem;
+  padding: 2.4rem;
 `;
 
 export const StyledCarousel = styled.div`
@@ -16,11 +18,16 @@ export const StyledSlidingDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  text-align: center;
 `;
-export const StyledSlidingImg = styled.img`
+export const StyledSlidingPic = styled.picture`
   width: 100%;
   flex-shrink: 0;
-  
+  & > img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
 `;
 
 export const StyledStatsWrapper = styled.div`

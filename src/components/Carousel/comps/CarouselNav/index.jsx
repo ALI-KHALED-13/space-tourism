@@ -2,10 +2,10 @@ import { useState } from "react";
 import { StyledNavList, StyledNavPoint } from "./styled";
 
 
- export const CarouselNav =({type, slides, slideTo})=> {
+ export const CarouselNav =({slides, slideTo, type})=> {
   const [cardInView, setCardinView] = useState(0);
   return (
-    <StyledNavList>
+    <StyledNavList type={type}>
       {slides.map((slide, idx)=> {
         return (
           <StyledNavPoint
@@ -15,8 +15,9 @@ import { StyledNavList, StyledNavPoint } from "./styled";
               slideTo(idx);
               setCardinView(idx)
             }}
+            type={type}
           >
-            {slide.name}
+            {type=== "nomial"? slide.name: type === "numerical" && idx + 1}
           </StyledNavPoint>
         )
       })}

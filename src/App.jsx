@@ -31,7 +31,7 @@ function App() {
   
       <SpaceHeader appPages={appPages}/>
       <Routes>
-        <Route path="/" element={<Home nextPagePath={appPages[0].path}/>}/>
+        <Route path="/" element={<Home nextPagePath={appPages[0].href.path}/>}/>
         
         {appPages.map((page, idx)=> {
           const Comp = pagesComps[page.comp];
