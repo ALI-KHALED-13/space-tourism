@@ -1,14 +1,10 @@
 import { Carousel } from "../../components/Carousel"
-import { Heading5 } from "../../components/Typo"
+import { SpaceSection } from "../../components/SpaceSection"
 
 export const Technology =({data, pageOrder})=> {
   return (
-    <section>
-      <Heading5>
-        {data.title}
-      </Heading5>
-
-      <Carousel data={data}/>
-    </section>
+    <SpaceSection order={pageOrder} title={data.title}>
+      <Carousel data={data} className="technology"/>
+    </SpaceSection>
   )
 }

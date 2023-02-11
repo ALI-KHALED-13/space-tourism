@@ -55,6 +55,7 @@ export const getNavPointStyles =({inView, type, colors})=>{
         font-size: 1.4rem;
         line-height: 17px;
         letter-spacing: 2.3625px;
+        padding: 0.8rem 0.1rem;
         color: ${inView? "white" : colors.spaceBlue};
 
         border-bottom: ${inView? "3px solid white" : "none"};

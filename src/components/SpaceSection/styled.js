@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { mediaQuery } from "../../utils";
 
 export const StyledSection = styled.section`
-  & > h5 {
+  & > h2 {
     text-align: center;
   }
   ${mediaQuery("md")}{

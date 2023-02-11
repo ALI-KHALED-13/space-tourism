@@ -2,110 +2,115 @@ import styled, {css} from "styled-components";
 import { mediaQuery } from "../../utils";
 
 export const getBellefair =()=> css`
-  font-family: 'Bellefair';
+  font-family: 'Bellefair', serif;
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
   color: ${({color, theme: {colors}})=> color && colors[color]};
 `;
 export const getDenseBarlow =()=> css`
-  font-family: 'Barlow Condensed';
+  font-family: 'Barlow Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
   color: ${({color, theme: {colors}})=> color && colors[color]};
 `;
 
+
 export const Heading1 = styled.h1`
   ${getBellefair()}
-  line-height: 100px;
+  line-height: 1.25;
   font-size: 8rem;
   
   ${mediaQuery("md")}{
     font-size: 15rem;
-    line-height: 172px;
   }
 `;
 
 export const Heading2 = styled.h2`
-  ${getBellefair()}
-  line-height: 64px;
-  font-size: 5.6rem;
+  ${getDenseBarlow()}
+  line-height: 1.2;
+  font-size: 1.6rem;
+  letter-spacing: 2.7px;
 
   ${mediaQuery("md")}{
-    font-size: 10rem;
-    line-height: 114.6px;
+    font-size: 2rem;
+    letter-spacing: 3.38px;
+  }
+  ${mediaQuery("lg")}{
+    font-size: 2.8rem;
+    letter-spacing: 4.72px;
   }
 `;
 
-export const Heading3 = styled.h3`
+
+export const Heading3 = styled.h3` // size variation happens here
   ${getBellefair()}
-  line-height: 37px;
-  font-size: 3.2rem;
+  line-height: 1.15;
+  font-size: ${({L})=> L? 5.6: 2.4}rem;
+
   margin: 1.5rem;
 
   ${mediaQuery("md")}{
-    line-height: 64px;
-    font-size: 5.6rem;
+    font-size: ${({L})=> L? 8: 4}rem;
+  }
+  ${mediaQuery("lg")}{
+    font-size: ${({L})=> L? 10: 5.6}rem;
   }
 `;
 
 export const Heading4 = styled.h4`
+  margin: 1rem;
   ${getBellefair()}
-  line-height: 28px;
-  font-size: 2.4rem;
-  margin: 1.2rem;
+  font-size: 2.8rem;
+  line-height: 1.15;
+`;
+
+export const Subheading1 = styled.h5`
+  ${getBellefair()}
+  font-size: 1.6rem;
+  line-height: 1.15;
+  margin: 1rem;
 
   ${mediaQuery("md")}{
-    line-height: 37px;
+    font-size: 2.4rem;
+  }
+  ${mediaQuery("lg")}{
     font-size: 3.2rem;
   }
 `;
 
-export const Heading5 = styled.h5`
-  ${getDenseBarlow()}
-  font-size: 16px;
-  line-height: 19.2px;
-  letter-spacing: 2.7px;
-  margin: 1rem;
-
-  ${mediaQuery("md")}{
-    font-size: 2.8rem;
-    line-height: 34px;
-    letter-spacing: 4.725px;
-  }
-`;
-
-export const Subheading1 = styled.h6`
-  ${getBellefair()}
-  font-size: 28px;
-  line-height: 32px;
-  margin: 1rem;
-`;
-
 export const Subheading2 = styled.h6`
   ${getDenseBarlow()}
-  font-size: 14px;
-  line-height: 17px;
-  /* identical to box height */
+  font-size: 1.4rem;
+  line-height: 1.2;
   letter-spacing: 2.3625px;
   margin: 1rem;
 `;
 
 export const StyledParagraph = styled.p`
-  font-family: 'Barlow';
+  font-family: 'Barlow', sans-serif;;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 25px;
-  margin: 1.2rem;
+  line-height: 1.73;
+
+  margin: 1rem;
   color: ${({color, theme: {colors}})=> color && colors[color]};
+
   ${mediaQuery("md")}{
     font-size: 16px;
-    line-height: 28px;
   }
   ${mediaQuery("lg")}{
     font-size: 18px;
-    line-height: 32px;
   }
 `;
+
+export const typos = {
+  Heading1,
+  Heading2,
+  Heading3,
+  Subheading1,
+  Subheading2,
+  StyledParagraph
+}
