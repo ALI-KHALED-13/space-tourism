@@ -13,8 +13,8 @@
         { 
          "name": "moon",
           "images": {
-            "mobile": "destinations.moon.png",
-            "desktop": "destinations.moon.webp"
+            "mobile": "destinations.moon.webp",
+            "desktop": "destinations.moon.png"
           },
           "headers": [
             {
@@ -34,8 +34,8 @@
         { 
          "name": "mars",
           "images": {
-            "mobile": "destinations.mars.png",
-            "desktop": "destinations.mars.webp"
+            "mobile": "destinations.mars.webp",
+            "desktop": "destinations.mars.png"
           },
           "headers": [
             {
@@ -55,8 +55,8 @@
         { 
          "name": "europa",
           "images": {
-            "mobile": "destinations.europa.png",
-            "desktop": "destinations.europa.webp"
+            "mobile": "destinations.europa.webp",
+            "desktop": "destinations.europa.png"
           },
           "headers": [
             {
@@ -76,8 +76,8 @@
         { 
          "name": "titan",
           "images": {
-            "mobile": "destinations.titan.png",
-            "desktop": "destinations.titan.webp"
+            "mobile": "destinations.titan.webp",
+            "desktop": "destinations.titan.png"
           },
           "headers": [
             {
@@ -135,8 +135,8 @@
           {
            "name": "MarkShutt leworth",
             "images": {
-              "mobile": "crew.mark.png",
-              "desktop": "crew.mark.webp"
+              "mobile": "crew.mark.webp",
+              "desktop": "crew.mark.png"
             },
             "headers": [
               {
@@ -158,8 +158,8 @@
           {
            "name": "Victor Glover",
             "images": {
-              "mobile": "crew.victor.png",
-              "desktop": "crew.victor.webp"
+              "mobile": "crew.victor.webp",
+              "desktop": "crew.victor.png"
             },
             "headers": [
               {
@@ -181,8 +181,8 @@
           {
            "name": "Anousheh Ansari",
             "images": {
-              "mobile": "crew.anousheh.png",
-              "desktop": "crew.anousheh.webp"
+              "mobile": "crew.anousheh.webp",
+              "desktop": "crew.anousheh.png"
             },
             "headers": [
               {
@@ -219,8 +219,8 @@
         {
          "name": "Launch vehicle",
           "images": {
-            "mobile": "technology.launchVehicle.portrait",
-            "desktop": "technology.launchVehicle.landscape"
+            "mobile": "technology.launchVehicle.landscape",
+            "desktop": "technology.launchVehicle.portrait"
           },
           "headers": [
             {
@@ -242,8 +242,8 @@
         {
          "name": "Spaceport",
           "images": {
-            "mobile": "technology.spaceport.portrait",
-            "desktop": "technology.spaceport.landscape"
+            "mobile": "technology.spaceport.landscape",
+            "desktop": "technology.spaceport.portrait"
           },
           "headers": [
             {
@@ -265,8 +265,8 @@
         {
           "name": "Space Capsule",
           "images": {
-            "mobile": "technology.spaceCapsule.portrait",
-            "desktop": "technology.spaceCapsule.landscape"
+            "mobile": "technology.spaceCapsule.landscape",
+            "desktop": "technology.spaceCapsule.portrait"
           },
           "headers": [
             {

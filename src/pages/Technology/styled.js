@@ -2,29 +2,6 @@ import styled, {css} from "styled-components";
 import { getBellefair } from "../../components/Typo";
 import { mediaQuery } from "../../utils";
 
-
-export const StyledContainer = styled.div`
-  display: grid;
-  gap: 3rem;
-  padding-top: 3.2rem;
-`;
-
-
-export const StyledSlidingDiv = styled.div`
-  width: 100%;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  ${({images})=> images && css`
-    height: 20rem;
-    background-image: url(${images.mobile});
-    background-size: cover;
-    background-position-y: 50%;
-  `}
-`;
-
-
 export const StyledNavList = styled.ul`
   list-style-type: none;
   display: flex;
@@ -34,6 +11,73 @@ export const StyledNavList = styled.ul`
   ${mediaQuery("lg")}{
     flex-direction: column;
     gap: 3.2rem;
+  }
+`;
+
+export const StyledContainer = styled.div`
+  display: grid;
+  gap: 3.4rem;
+  padding-top: 3.2rem;
+
+  ${mediaQuery("md")}{
+    gap: 5.6rem;
+    padding-top: 6rem;
+
+    & .infoCarousel {
+      max-width: 50rem;
+      margin: -1.6rem auto;
+    }
+  }
+
+  ${mediaQuery("lg")}{
+    grid-template-columns: 1fr 4.5fr 4.5fr;
+    align-items: center;
+    justify-items: start;
+    column-gap: 8rem;
+    
+    & ${StyledNavList} {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+    }
+    & .infoCarousel {
+      max-width: unset;
+      margin: 0;
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+    & .mediaCarousel {
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
+    }
+  }
+  
+`;
+
+
+export const StyledSlidingDiv = styled.div`
+  width: 100%;
+  padding: 2.4rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  ${mediaQuery("lg")}{
+    align-items: flex-start;
+    text-align: left;
+  }
+`;
+
+export const StyledSlidingPic = styled.picture`
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 1rem;
+  
+  & > img {
+    width: 100%;
   }
 `;
 

@@ -1,6 +1,6 @@
 import { SpaceSection } from "../../components/SpaceSection"
 import { useCarousel } from "../../utils"
-import { StyledContainer, StyledNavList, StyledNavPoint, StyledSlidingDiv, StyledSlidingPic, } from "./styled";
+import { StyledContainer, StyledNavList, StyledNavPoint, StyledSlidingDiv, StyledSlidingPic } from "./styled";
 import { assets } from "../../assets";
 import * as typo from "../../components/Typo";
 
@@ -22,7 +22,7 @@ export const Crew =({data, pageOrder})=> {
 
             return (
               <StyledSlidingPic key={slide.images.mobile}>
-                <source media="min-width: 1440px" srcSet={desktopVariant}/>
+                <source media="(min-width: 1440px)" srcSet={desktopVariant}/>
                 <img src={mobileVariant} alt={`image number ${idx + 1}`} />
               </StyledSlidingPic>
             );

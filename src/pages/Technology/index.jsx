@@ -1,10 +1,15 @@
 import { SpaceSection } from "../../components/SpaceSection"
 import { useCarousel } from "../../utils"
-import { StyledContainer, StyledNavList, StyledNavPoint, StyledSlidingDiv } from "./styled";
+import { StyledContainer, StyledNavList, StyledNavPoint, StyledSlidingDiv, StyledSlidingPic } from "./styled";
 import { assets } from "../../assets";
 import * as typo from "../../components/Typo";
 
+/*
 
+********************************************
+scroll vertically here?
+*****************************************
+*/
 const { StyledParagraph } = typo;
 
 export const Technology =({data, pageOrder})=> {
@@ -17,10 +22,15 @@ export const Technology =({data, pageOrder})=> {
 
         <MediaCarousel>
           {data.slides.map((slide, idx)=> {
-            const desktop = slide.images.desktop.split(".").reduce((obj, key)=> obj[key] , assets);
-            const mobile = slide.images.mobile.split(".").reduce((obj, key)=> obj[key] , assets);
+            const desktopVariant = slide.images.desktop.split(".").reduce((obj, key)=> obj[key] , assets);
+            const mobileVariant = slide.images.mobile.split(".").reduce((obj, key)=> obj[key] , assets);
 
-            return <StyledSlidingDiv key={slide.images.mobile} images={{desktop, mobile}}/>
+            return (
+              <StyledSlidingPic key={slide.images.mobile}>
+                <source media="(min-width: 1440px)" srcSet={desktopVariant}/>
+                <img src={mobileVariant} alt={`image number ${idx + 1}`} />
+              </StyledSlidingPic>
+            );
           })}
         </MediaCarousel>
 

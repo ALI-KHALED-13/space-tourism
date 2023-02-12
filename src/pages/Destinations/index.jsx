@@ -22,7 +22,7 @@ export const Destinations =({data, pageOrder})=> {
 
             return (
               <StyledSlidingPic key={slide.images.mobile}>
-                <source media="min-width: 1440px" srcSet={desktopVariant}/>
+                <source media="(min-width: 1440px)" srcSet={desktopVariant}/>
                 <img src={mobileVariant} alt={`image number ${idx + 1}`} />
               </StyledSlidingPic>
             );

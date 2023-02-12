@@ -19,14 +19,10 @@ export const StyledContainer = styled.div`
     margin: 6.5rem auto;
     justify-items: start;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.7fr 9.3fr;
     column-gap: 12rem;
 
     & .mediaCarousel {
       grid-row: 1 / 3;
-    }
-    & .infoCarousel {
-      text-align: left;
     }
   }
 `;
