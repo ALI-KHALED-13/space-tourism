@@ -6,7 +6,18 @@ export const StyledSection = styled.section`
     text-align: center;
   }
   ${mediaQuery("md")}{
-    text-align: left;
+    padding-top: 4rem;
+    & > h2 {
+      text-align: left;
+      padding-left: 3.5rem;
+    }
+  }
+  ${mediaQuery("lg")}{
+    margin-left: 15%;
+    padding-top: 7rem;
+    & > h2 {
+      padding-left: 0;
+    }
   }
 
 `;
