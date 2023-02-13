@@ -16,7 +16,7 @@ export const StyledNavList = styled.ul`
 
 export const StyledContainer = styled.div`
   display: grid;
-  gap: 3.4rem;
+  gap: 2.6rem;
   padding-top: 3.2rem;
 
   ${mediaQuery("md")}{
@@ -61,7 +61,8 @@ export const StyledSlidingDiv = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-
+  gap: 0.9rem;
+  
   ${mediaQuery("lg")}{
     align-items: flex-start;
     text-align: left;

@@ -50,7 +50,7 @@ export const StyledSlidingPic = styled.picture`
     margin: 0;
     padding: 3rem;
     & > img {
-      width: 80%;
+      width: 100%;
     }
   }
 `;
@@ -61,6 +61,7 @@ export const StyledSlidingDiv = styled.div`
   flex-direction: column;
   text-align: center;
   gap: 2rem;
+  padding: 0 2.4rem;
 
   ${mediaQuery("lg")}{
     text-align: left;
@@ -73,6 +74,7 @@ export const StyledNavList = styled.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2.7rem;
   ${mediaQuery("md")}{
     gap: 3.6rem;
@@ -112,5 +114,6 @@ export const StyledStatsWrapper = styled.div`
   ${mediaQuery("md")}{
     flex-direction: row;
     justify-content: space-around;
+    gap: 5rem;
   }
 `;

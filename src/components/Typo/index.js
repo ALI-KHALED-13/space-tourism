@@ -21,6 +21,7 @@ export const Heading1 = styled.h1`
   ${getBellefair()}
   line-height: 1.25;
   font-size: 8rem;
+  margin: 2rem 0;
   
   ${mediaQuery("md")}{
     font-size: 15rem;
@@ -49,7 +50,6 @@ export const Heading3 = styled.h3` // size variation happens here
   line-height: 1.15;
   font-size: ${({L})=> L? 5.6: 2.4}rem;
 
-  margin: 1.5rem 0;
 
   ${mediaQuery("md")}{
     font-size: ${({L})=> L? 8: 4}rem;

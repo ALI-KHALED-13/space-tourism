@@ -31,9 +31,7 @@ export const StyledNavLink = styled(NavLink)`
   border-radius: 2px;
   text-transform: uppercase;
   cursor: pointer;
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+  
   & .counter {
     font-weight: 700;
     margin-right: 1rem;

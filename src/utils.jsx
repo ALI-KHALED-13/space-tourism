@@ -33,7 +33,7 @@ export const useScreenWidth =()=>{
 }
 
 
-export const useCarousel =()=> {
+export const useCarousel =(direction = "horizontal")=> {
   const [slideInView, setSlideinView] = useState(0);
 
   const carouselRef = useRef([]); // interesting case of attatching one ref to multiple elms
@@ -41,9 +41,14 @@ export const useCarousel =()=> {
 
   const slideTo = (idx)=> {
     carouselRef.current.forEach(elm=> elm.scroll({
-      left: idx * elm.clientWidth, 
-      behavior: "smooth"
-    }));
+      behavior: "smooth",
+      ...(direction === "vertical"?
+        {top: idx * elm.clientHeight}
+      :
+        {left: idx * elm.clientWidth,}
+      )
+     })
+    );
     setSlideinView(idx)
   }
 
@@ -53,9 +58,12 @@ export const useCarousel =()=> {
 
   const carouselEssentialStyles = {
     width: "100%",
-    overflowX: "hidden",
-    display:"flex"
-  };
+    overflow: "hidden",
+    ...(direction === "vertical"?
+    {height: Math.max(carouselRef.map(ref=> ref.current?.firstChild.clientHeight))}
+    :
+    {display:"flex"}
+  )};
 
   // useCallback so the two comps don't get redeclared with every scroll an hus losing its scrollLeft changes
   const MediaCarousel = useCallback(({className, children})=> ( 

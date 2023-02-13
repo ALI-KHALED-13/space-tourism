@@ -34,7 +34,10 @@ export const StyledNavLink = styled(NavLink)`
   padding: 4rem 0.2rem;
   cursor: pointer;
   text-transform: uppercase;
-  &:hover {
-    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+  @media (hover: hover) { // to exclude tablets that don't have hover effect
+    &:hover {
+      border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+    }
   }
+  
 `;

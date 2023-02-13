@@ -33,7 +33,7 @@ export const StyledNavPoint = styled.li`
 
 export const StyledContainer = styled.div`
   display: grid;
-  gap: 3rem;
+  gap: 3.2rem;
   padding: 2rem;
 
   ${mediaQuery("md")}{
@@ -51,7 +51,8 @@ export const StyledContainer = styled.div`
   }
 
   ${mediaQuery("lg")}{
-    max-width: unset;
+    max-width: 120rem;
+    justify-content: space-between;
     grid-template-columns: 1fr 1fr;
     column-gap: 8rem;
     justify-items: start;
@@ -96,11 +97,13 @@ export const StyledSlidingDiv = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-
+  gap: 0.8rem;
+  padding: 0 0.5rem;
   ${mediaQuery("md")}{
     justify-content: flex-end; // to be close to the dots in tablet mode
   }
   ${mediaQuery("lg")}{
+    gap: 1.5rem;
     text-align: left;
     align-items: flex-start;
   }

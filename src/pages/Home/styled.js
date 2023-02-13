@@ -4,22 +4,28 @@ import { mediaQuery } from "../../utils";
 
 
 export const StyledSection = styled.section`
-  min-height: 75vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 1rem auto;
-  gap: 2.5rem;
-  padding: 3rem;
+  padding: 2.4rem;
+
   ${mediaQuery("md")}{
-    padding: 3rem 16rem;
+    padding-top: 10rem;
+    max-width: 45rem;
+    margin: 0 auto;
   }
   ${mediaQuery("lg")}{
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-end;
-    padding: 5rem 16rem;
-    gap: 35rem;
+    max-width: 120rem;
+    & > div {
+      text-align: left;
+      max-width: 45rem;
+    }
+    
   }
 `;
 
@@ -46,13 +52,15 @@ export const StyledExploreButton = styled.button`
   background-color: white;
   margin-top: auto;
   ${getBellefair()}
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 2rem;
+  line-height: 1.15;
   color: ${({theme : {colors}})=> colors.spaceBlack};
   position: relative;
 
 
   ${mediaQuery("md")}{
+    font-size: 3.2rem;
+    letter-spacing: 2px;
     width: 24rem;
     height: 24rem; 
   }
