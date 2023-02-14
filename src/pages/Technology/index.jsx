@@ -1,5 +1,5 @@
 import { SpaceSection } from "../../components/SpaceSection"
-import { useCarousel } from "../../utils"
+import { getBreakPoint, useCarousel, useScreenWidth } from "../../utils"
 import { StyledContainer, StyledNavList, StyledNavPoint, StyledSlidingDiv, StyledSlidingPic } from "./styled";
 import { assets } from "../../assets";
 import * as typo from "../../components/Typo";
@@ -13,8 +13,9 @@ scroll vertically here?
 const { StyledParagraph } = typo;
 
 export const Technology =({data, pageOrder})=> {
-
-  const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel();
+  
+  const screenWidth = useScreenWidth();
+  const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel("vertical", getBreakPoint("lg"));
 
   return (
     <SpaceSection order={pageOrder} title={data.title}>

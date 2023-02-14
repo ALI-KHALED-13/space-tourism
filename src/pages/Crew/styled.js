@@ -11,25 +11,6 @@ export const StyledNavList = styled.ul`
   }
 `;
 
-export const StyledNavPoint = styled.li`
-  cursor: pointer;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, ${ ({inView})=>inView? 1: 0.17});
-  &:hover {
-    background-color: rgba(255, 255, 255, ${({inView})=> inView? 1: 0.5});
-  }
-  ${mediaQuery("md")}{
-    width: 1.5rem; //intentional design change
-    height: 1.5rem;
-  }
-  ${mediaQuery("lg")}{
-    width: 1.8rem;
-    height: 1.8rem;
-  }
-`;
-
 
 export const StyledContainer = styled.div`
   display: grid;
@@ -106,5 +87,24 @@ export const StyledSlidingDiv = styled.div`
     gap: 1.5rem;
     text-align: left;
     align-items: flex-start;
+  }
+`;
+
+export const StyledNavPoint = styled.li`
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, ${ ({inView})=>inView? 1: 0.17});
+  &:hover {
+    background-color: rgba(255, 255, 255, ${({inView})=> inView? 1: 0.5});
+  }
+  ${mediaQuery("md")}{
+    width: 1.5rem; //intentional design change
+    height: 1.5rem;
+  }
+  ${mediaQuery("lg")}{
+    width: 1.8rem;
+    height: 1.8rem;
   }
 `;

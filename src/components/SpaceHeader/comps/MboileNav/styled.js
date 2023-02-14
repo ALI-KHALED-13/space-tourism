@@ -8,6 +8,7 @@ export const StyledNavMenu = styled.nav`
   position: fixed;
   right: ${({open})=> open? 0: "-65%"};
   top: 0;
+  z-index: 5;
   height: 100%;
   width: 65%;
   transition: right 0.3s ease-in-out;

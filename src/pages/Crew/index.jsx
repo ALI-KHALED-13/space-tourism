@@ -1,5 +1,5 @@
 import { SpaceSection } from "../../components/SpaceSection"
-import { useCarousel } from "../../utils"
+import { getBreakPoint, useCarousel } from "../../utils"
 import { StyledContainer, StyledNavList, StyledNavPoint, StyledSlidingDiv, StyledSlidingPic } from "./styled";
 import { assets } from "../../assets";
 import * as typo from "../../components/Typo";
@@ -9,7 +9,7 @@ const { StyledParagraph } = typo;
 
 export const Crew =({data, pageOrder})=> {
 
-  const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel();
+  const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel("vertical", getBreakPoint("md"));
 
   return (
     <SpaceSection order={pageOrder} title={data.title}>

@@ -35,6 +35,10 @@ export const StyledContainer = styled.div`
     justify-items: start;
     column-gap: 8rem;
     
+    & .mediaCarousel {
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
+    }
     & ${StyledNavList} {
       grid-row: 1 / 2;
       grid-column: 1 / 2;
@@ -44,10 +48,6 @@ export const StyledContainer = styled.div`
       margin: 0;
       grid-row: 1 / 2;
       grid-column: 2 / 3;
-    }
-    & .mediaCarousel {
-      grid-row: 1 / 2;
-      grid-column: 3 / 4;
     }
   }
   
@@ -75,7 +75,7 @@ export const StyledSlidingPic = styled.picture`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin-top: 1rem;
+  padding-top: 1rem;
   
   & > img {
     width: 100%;
