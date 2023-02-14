@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import backgrounds from "./assets/backgrounds";
+import { backgrounds } from "./assets/backgrounds";
 import { mediaQuery } from "./utils";
 
 export const colors = {

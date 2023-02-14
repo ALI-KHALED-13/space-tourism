@@ -14,7 +14,7 @@ import technologyMobile from "./technology/background-technology-mobile.jpg";
 import technologyTablet from "./technology/background-technology-tablet.jpg";
 import technologyDesktop from "./technology/background-technology-desktop.jpg";
 
-export default {
+export const backgrounds = {
   home: {
     mobile: homeMobile,
     tablet: homeTablet,
