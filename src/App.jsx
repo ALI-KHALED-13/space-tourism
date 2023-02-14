@@ -24,8 +24,6 @@ function App() {
 
   const pagesComps = {Crew, Destinations, Technology};
 
-  console.log({pathname})
-
   return (
     <ThemeProvider theme={{colors}}>
       <GlobalStyles page={pathname === "/"? "home": pathname.slice(1)} />

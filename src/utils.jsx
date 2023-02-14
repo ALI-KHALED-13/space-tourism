@@ -113,17 +113,9 @@ const setInfoCarouselHeight =(infoCarousel)=> {
 const setMediaCarouselHeight =(mediaCarousel)=>{
   mediaCarousel.style.display = "grid";
   mediaCarousel.style.gridAutoRows = "1fr";
-  setTimeout(() => { // onLoad is better but buggy
+  
+  mediaCarousel.firstChild.lastChild.onload =()=>{
     mediaCarousel.style.height = mediaCarousel.firstChild.offsetHeight  + "px";
-  }, 300);
+  }
 }
 
-/*for (let carouselElm of carouselRef.current){
-          const tallestChildHeight = Math.max.apply(null, [...carouselElm.children].map(child=> child.clientHeight));
-          carouselElm.style.height = tallestChildHeight + "px";
-          for (let child of carouselElm.children){
-            if (child.clientHeight === tallestChildHeight) continue;
-
-            child.style.margin = (tallestChildHeight - child.clientHeight) / 2 + "px 0px";
-          }
-        }*/ 
