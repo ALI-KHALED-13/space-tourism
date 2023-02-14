@@ -105,8 +105,8 @@ const setInfoCarouselHeight =(infoCarousel)=> {
   for (let child of infoCarousel.children){
     if (child.offsetHeight === tallestChildHeight) continue;
     
-    child.style.marginTop =  (tallestChildHeight - child.offsetHeight) / 1.5 + "px";
-    child.style.marginBottom =  (tallestChildHeight - child.offsetHeight) / 1.5 + "px";
+    child.style.marginTop =  (tallestChildHeight - child.offsetHeight) / 1.8 + "px";
+    child.style.marginBottom =  (tallestChildHeight - child.offsetHeight) / 1.8 + "px";
   }
 }
 

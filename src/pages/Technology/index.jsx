@@ -4,12 +4,7 @@ import { StyledContainer, StyledNavList, StyledNavPoint, StyledSlidingDiv, Style
 import { assets } from "../../assets";
 import * as typo from "../../components/Typo";
 
-/*
 
-********************************************
-scroll vertically here?
-*****************************************
-*/
 const { StyledParagraph } = typo;
 
 export const Technology =({data, pageOrder})=> {
