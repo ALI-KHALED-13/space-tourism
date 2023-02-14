@@ -31,7 +31,7 @@ export default createGlobalStyle`
   }
   body {
     min-height: 100vh;
-    //background-image: url(${( { page })=> backgrounds[page].mobile});
+    background-image: url(${( { page })=> backgrounds[page].mobile});
     background-color: ${colors.spaceBlack};
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,7 +41,7 @@ export default createGlobalStyle`
       background-image: url(${( { page })=> backgrounds[page].tablet});
     }
     ${mediaQuery("lg")}{
-      //background-image: url(${( { page })=> backgrounds[page].desktop});
+      background-image: url(${( { page })=> backgrounds[page].desktop});
     }
   }
   button {
