@@ -42,8 +42,8 @@ export const useCarousel =(direction = "horizontal", breakPoint = 0)=> {
   useEffect(()=> {
     if (carouselRef.current[1]){
       if (direction == "vertical" && screenWidth > breakPoint){
-        setMediaCarouselHeight(carouselRef.current[0]);
         setInfoCarouselHeight(carouselRef.current[1]);
+        setMediaCarouselHeight(carouselRef.current[0]);
       } else {
         carouselRef.current.forEach(elm=> {
           elm.style.height = "auto";
