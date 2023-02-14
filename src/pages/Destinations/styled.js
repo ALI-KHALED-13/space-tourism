@@ -50,7 +50,7 @@ export const StyledSlidingPic = styled.picture`
     margin: 0;
     padding: 3rem;
     & > img {
-      width: 100%;
+      width: 90%;
     }
   }
 `;
