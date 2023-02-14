@@ -197,18 +197,18 @@ Error generating stack: `+i.message+`
   }
   body {
     min-height: 100vh;
-    background-image: url(${({page:e})=>Ol[e].mobile});
+    //background-image: url(${({page:e})=>Ol[e].mobile});
     background-color: ${Do.spaceBlack};
     background-repeat: no-repeat;
     background-size: cover;
     transition: background-image 0.8s linear;
     
-    ${B("md")}{
+    /*${B("md")}{
       background-image: url(${({page:e})=>Ol[e].tablet});
     }
     ${B("lg")}{
-      background-image: url(${({page:e})=>Ol[e].desktop});
-    }
+      //background-image: url(${({page:e})=>Ol[e].desktop});
+    }*/
   }
   button {
     background: none;
