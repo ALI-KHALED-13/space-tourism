@@ -78,7 +78,7 @@ export const StyledSlidingPic = styled.picture`
   padding-top: 1rem;
   
   & > img {
-    width: 90%;
+    width: 100%;
   }
 `;
 
