@@ -37,12 +37,12 @@ export default createGlobalStyle`
     background-size: cover;
     transition: background-image 0.8s linear;
     
-    /*${mediaQuery("md")}{
+    ${mediaQuery("md")}{
       background-image: url(${( { page })=> backgrounds[page].tablet});
     }
     ${mediaQuery("lg")}{
       //background-image: url(${( { page })=> backgrounds[page].desktop});
-    }*/
+    }
   }
   button {
     background: none;
