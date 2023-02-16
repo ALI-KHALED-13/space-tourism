@@ -24,6 +24,16 @@ export const StyledXSign = styled(X)`
 
 `;
 
+export const StyledNavList = styled.ol`
+  list-style-type: none;
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+`;
+
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   display: block;
@@ -33,21 +43,12 @@ export const StyledNavLink = styled(NavLink)`
   text-transform: uppercase;
   cursor: pointer;
   
+  &.active { // added automatically by react-router NavLink component
+    border-right: 4px solid white;
+  }
+
   & .counter {
     font-weight: 700;
     margin-right: 1rem;
-  }
-`;
-
-export const StyledNavList = styled.ol`
-  list-style-type: none;
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 19px;
-  letter-spacing: 2.7px;
-  & .active { // added automatically by react-router NavLink component
-    border-right: 4px solid white;
   }
 `;

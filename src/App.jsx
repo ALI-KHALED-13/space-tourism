@@ -1,20 +1,25 @@
 
+import React, { Suspense } from 'react';
 import { Routes, Route, useLocation} from 'react-router-dom'
 import {ThemeProvider} from 'styled-components'
 import SpaceHeader from './components/SpaceHeader'
 import GlobalStyles, { colors } from './GlobalStyles';
 import appPages from './pages-data.json';
-import { Crew } from './pages/Crew';
-import { Destinations } from './pages/Destinations';
 import { Home } from './pages/Home';
-import { Technology } from './pages/Technology';
+import { SpaceLoader } from './components/SpaceLoader';
+const Crew = React.lazy(()=> import('./pages/Crew'));
+const Destinations = React.lazy(()=> import('./pages/Destinations'));
+const Technology = React.lazy(()=> import('./pages/Technology'));
 
 /*
 - to do:
-  *React lazy and suspnse
-  * cool loading page
-  *error boundry
-  * 
+  * error boundry?
+  * useTransition
+  * swipe to slide
+  * styling checking and code refactoring
+  * one last check for page merging
+  * testing: cypress, unit?
+  * solidify the configs and spacetoon
 */
 
 
@@ -28,20 +33,22 @@ function App() {
       <GlobalStyles page={pathname === "/"? "home": pathname.slice(1)} />
   
       <SpaceHeader appPages={appPages}/>
-      <Routes>
-        <Route path="/" element={<Home nextPagePath={appPages[0].href.path}/>}/>
-        
-        {appPages.map((page, idx)=> {
-          const Comp = pagesComps[page.comp];
-          return (
-            <Route
-              key={page.comp + idx}
-              path={page.href.path}
-              element={<Comp data={page.data} pageOrder={idx + 1}/>}
-            />
-          )
-        })}      
-      </Routes>  
+      <Suspense fallback={<SpaceLoader />}>
+        <Routes>
+          <Route path="/" element={<Home nextPagePath={appPages[0].href.path}/>}/>
+          
+          {appPages.map((page, idx)=> {
+            const Comp = pagesComps[page.comp];
+            return (
+              <Route
+                key={page.comp + idx}
+                path={page.href.path}
+                element={<Comp data={page.data} pageOrder={idx + 1}/>}
+              />
+            )
+          })}  
+        </Routes> 
+      </Suspense>  
  
     </ThemeProvider>
   )

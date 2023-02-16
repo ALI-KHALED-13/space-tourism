@@ -4,7 +4,7 @@ import { mediaQuery } from "../../utils";
 
 
 export const StyledSection = styled.section`
-  min-height: 80vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@ export const StyledSection = styled.section`
   padding: 2.4rem;
 
   ${mediaQuery("md")}{
-    padding-top: 10rem;
+    padding: 10rem 0;
     max-width: 45rem;
     margin: 0 auto;
   }

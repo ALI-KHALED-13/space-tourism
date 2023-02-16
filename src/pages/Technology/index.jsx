@@ -7,7 +7,7 @@ import * as typo from "../../components/Typo";
 
 const { StyledParagraph } = typo;
 
-export const Technology =({data, pageOrder})=> {
+const Technology =({data, pageOrder})=> {
   
   const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel("vertical", getBreakPoint("lg"));
 
@@ -65,3 +65,5 @@ export const Technology =({data, pageOrder})=> {
     </SpaceSection>
   )
 }
+
+export default Technology;

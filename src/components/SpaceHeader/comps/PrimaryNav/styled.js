@@ -22,10 +22,6 @@ export const StyledNavList = styled.ol`
   line-height: 17px;
 /* identical to box height */
   letter-spacing: 2.3625px;
-
-  & .active { // added automatically by react-router NavLink component
-    border-bottom: 4px solid white;
-  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -39,5 +35,7 @@ export const StyledNavLink = styled(NavLink)`
       border-bottom: 4px solid rgba(255, 255, 255, 0.5);
     }
   }
-  
+  &.active { // added automatically by react-router NavLink component
+    border-bottom: 4px solid white;
+  }
 `;

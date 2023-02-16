@@ -7,7 +7,7 @@ import * as typo from "../../components/Typo";
 
 const { StyledParagraph } = typo;
 
-export const Crew =({data, pageOrder})=> {
+const Crew =({data, pageOrder})=> {
 
   const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel();
 
@@ -63,3 +63,5 @@ export const Crew =({data, pageOrder})=> {
     </SpaceSection>
   )
 }
+
+export default Crew;

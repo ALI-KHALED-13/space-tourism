@@ -7,7 +7,7 @@ import * as typo from "../../components/Typo";
 
 const { Heading4, StyledParagraph, Subheading2 } = typo;
 
-export const Destinations =({data, pageOrder})=> {
+const Destinations =({data, pageOrder})=> {
 
   const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel();
 
@@ -78,3 +78,5 @@ export const Destinations =({data, pageOrder})=> {
     </SpaceSection>
   )
 }
+
+export default Destinations;
