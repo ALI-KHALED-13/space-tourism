@@ -1,45 +1,6 @@
 import { useEffect, useState, useRef, useCallback} from "react";
-
-export const useUpdateTitle =(title)=> {
-  useEffect(()=> {
-    const titleElm = document.head.getElementsByTagName("TITLE")[0];
-    titleElm.textContent += " | " + title;
-    
-    return ()=> titleElm.textContent = titleElm.textContent.slice(0, titleElm.textContent.indexOf(" |"))
-  }, [])
-}
-
-export const getBreakPoint =(BPString)=> {
-  const breakpoints = {
-    "md": 768,
-    "lg": 1440
-  }
-  return breakpoints[BPString]
-}
-
-export const mediaQuery =(breakPoint)=> {
-  return `@media only screen and (min-width: ${getBreakPoint(breakPoint)}px)`;
-}
-
-export const useScreenWidth =()=>{
-  const [screenWidth, setScreenWidth] = useState(document.documentElement.clientWidth);
-
-  let timerId;
-  const updateScreenWidth =()=> {
-    clearTimeout(timerId);
-    
-    timerId = setTimeout(()=> {
-      setScreenWidth(document.documentElement.clientWidth);
-    }, 300);
-  }
-
-  useEffect(()=> {
-    window.addEventListener("resize", updateScreenWidth)
-    return ()=> window.removeEventListener("resize", updateScreenWidth)
-  }, [])
-
-  return screenWidth;
-}
+import { useScreenWidth } from ".";
+import { useSwipe } from ".";
 
 export const useCarousel =(direction = "horizontal", breakPoint = 0)=> {
   const [slideInView, setSlideinView] = useState(0);
@@ -47,6 +8,7 @@ export const useCarousel =(direction = "horizontal", breakPoint = 0)=> {
 
   const carouselRef = useRef([]); // interesting case of attatching one ref to multiple elms
   const screenWidth = useScreenWidth();
+  //const swipeDirection = useSwipe();
 
   useEffect(()=> {
     if (carouselRef.current[1]){
@@ -134,4 +96,3 @@ const setMediaCarouselHeight =(mediaCarousel)=>{
     }
   }
 }
-
