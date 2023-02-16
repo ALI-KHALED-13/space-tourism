@@ -1,5 +1,5 @@
 import { SpaceSection } from "../../components/SpaceSection"
-import { useCarousel } from "../../utils"
+import { useCarousel, useUpdateTitle } from "../../utils"
 import { StyledContainer, StyledNavList, StyledNavPoint, StyledSlidingDiv, StyledSlidingPic } from "./styled";
 import { assets } from "../../assets";
 import * as typo from "../../components/Typo";
@@ -10,6 +10,8 @@ const { StyledParagraph } = typo;
 export const Crew =({data, pageOrder})=> {
 
   const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel();
+
+  useUpdateTitle("Crew");
 
   return (
     <SpaceSection order={pageOrder} title={data.title}>

@@ -1,5 +1,5 @@
 import { SpaceSection } from "../../components/SpaceSection"
-import { getBreakPoint, useCarousel, useScreenWidth } from "../../utils"
+import { getBreakPoint, useCarousel, useUpdateTitle } from "../../utils"
 import { StyledContainer, StyledNavList, StyledNavPoint, StyledSlidingDiv, StyledSlidingPic } from "./styled";
 import { assets } from "../../assets";
 import * as typo from "../../components/Typo";
@@ -9,8 +9,9 @@ const { StyledParagraph } = typo;
 
 export const Technology =({data, pageOrder})=> {
   
-  const screenWidth = useScreenWidth();
   const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel("vertical", getBreakPoint("lg"));
+
+  useUpdateTitle("Technology");
 
   return (
     <SpaceSection order={pageOrder} title={data.title}>

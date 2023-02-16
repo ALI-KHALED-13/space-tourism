@@ -13,7 +13,6 @@ import { Technology } from './pages/Technology';
 - to do:
   *React lazy and suspnse
   * cool loading page
-  *not found page
   *error boundry
   * 
 */
