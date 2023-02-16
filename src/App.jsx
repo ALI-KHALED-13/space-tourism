@@ -14,7 +14,6 @@ const Technology = React.lazy(()=> import('./pages/Technology'));
 /*
 - to do:
   * error boundry?
-  * useTransition
   * swipe to slide
   * styling checking and code refactoring
   * one last check for page merging

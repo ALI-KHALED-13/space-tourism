@@ -123,8 +123,15 @@ const setMediaCarouselHeight =(mediaCarousel)=>{
   mediaCarousel.style.display = "grid";
   mediaCarousel.style.gridAutoRows = "1fr";
   
-  mediaCarousel.firstChild.lastChild.onload =()=>{
+  const largestImage = [...mediaCarousel.getElementsByTagName("img")].sort((img1, img2)=> {
+    return img2.naturalHeight - img1.naturalHeight
+  })[0];
+  if (largestImage.complete) {
     mediaCarousel.style.height = mediaCarousel.firstChild.offsetHeight  + "px";
+  } else {
+    largestImage.onload =()=>{
+      mediaCarousel.style.height = mediaCarousel.firstChild.offsetHeight  + "px";
+    }
   }
 }
 

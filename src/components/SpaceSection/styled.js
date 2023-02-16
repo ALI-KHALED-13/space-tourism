@@ -1,7 +1,22 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { mediaQuery } from "../../utils";
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0.5;
+    top: -50px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+`;
+
+
+
 export const StyledSection = styled.section`
+  position: relative;
+  animation: ${fadeIn} 0.6s ease-in-out;
   & > h2 {
     text-align: center;
   }
