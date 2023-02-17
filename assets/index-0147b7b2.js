@@ -1,4 +1,4 @@
-import{s as a,m as r,j as i,a as m,t as p,r as x}from"./index-6b2dfabe.js";import{u as b,a as $,S,b as g}from"./index-02ada82e.js";const c=a.ul`
+import{s as a,m as r,j as i,a as m,t as p,r as x}from"./index-b8161ff8.js";import{u as b,a as $,S,b as g}from"./index-3d25ede3.js";const c=a.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -84,8 +84,10 @@ import{s as a,m as r,j as i,a as m,t as p,r as x}from"./index-6b2dfabe.js";impor
   height: 1rem;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, ${({inView:e})=>e?1:.17});
-  &:hover {
-    background-color: rgba(255, 255, 255, ${({inView:e})=>e?1:.5});
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(255, 255, 255, ${({inView:e})=>e?1:.5});
+    }
   }
   ${r("md")}{
     width: 1.5rem; //intentional design change

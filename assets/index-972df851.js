@@ -1,4 +1,4 @@
-import{s as o,m as l,b as w,j as r,a as c,t as g,r as $,c as S}from"./index-6b2dfabe.js";import{u as b,a as k,S as C,b as p}from"./index-02ada82e.js";const h=o.ul`
+import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as S}from"./index-b8161ff8.js";import{u as b,a as k,S as v,b as p}from"./index-3d25ede3.js";const h=o.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@ import{s as o,m as l,b as w,j as r,a as c,t as g,r as $,c as S}from"./index-6b2d
     flex-direction: column;
     gap: 3.2rem;
   }
-`,v=o.div`
+`,C=o.div`
   display: grid;
   gap: 2.6rem;
   padding-top: 3.2rem;
@@ -83,8 +83,10 @@ import{s as o,m as l,b as w,j as r,a as c,t as g,r as $,c as S}from"./index-6b2d
   color: ${({inView:e,theme:{colors:m}})=>e?m.spaceBlack:"white"};
 
   border: 1px solid rgba(255, 255, 255, ${({inView:e})=>e?1:.25});
-  &:hover {
-    border: 1px solid white;
+  @media (hover: hover) {
+    &:hover {
+      border: 1px solid white;
+    }
   }
   ${l("md")}{
     width: 5.8rem;
@@ -98,4 +100,4 @@ import{s as o,m as l,b as w,j as r,a as c,t as g,r as $,c as S}from"./index-6b2d
     font-size: 32px;
     line-height: 37px;
   }
-`,{StyledParagraph:P}=g,E=({data:e,pageOrder:m})=>{const{InfoCarousel:u,MediaCarousel:f,slideTo:x,slideInView:y}=b("vertical",S("lg"));return k("Technology"),r(C,{order:m,title:e.title,children:c(v,{children:[r(f,{children:e.slides.map((i,t)=>{const a=i.images.desktop.split(".").reduce((s,n)=>s[n],p),d=i.images.mobile.split(".").reduce((s,n)=>s[n],p);return c(T,{children:[r("source",{media:"(min-width: 1440px)",srcSet:a}),r("img",{src:d,alt:`image number ${t+1}`})]},i.images.mobile)})}),r(h,{children:e.slides.map((i,t)=>r(B,{inView:t===y,onClick:()=>x(t),children:t+1},"slide to"+i.name))}),r(u,{children:e.slides.map((i,t)=>{var a;return c(j,{children:[(a=i.headers)==null?void 0:a.map((d,s)=>{const n=g[d.comp];return $.createElement(n,{...d.props,key:`slide${t+1}header${s+1}`})}),r(P,{color:"spaceBlue",children:i.description})]},`slide${t+1} info`)})})]})})};export{E as default};
+`,{StyledParagraph:P}=g,E=({data:e,pageOrder:m})=>{const{InfoCarousel:u,MediaCarousel:f,slideTo:x,slideInView:y}=b("vertical",S("lg"));return k("Technology"),t(v,{order:m,title:e.title,children:c(C,{children:[t(f,{children:e.slides.map((i,r)=>{const a=i.images.desktop.split(".").reduce((s,n)=>s[n],p),d=i.images.mobile.split(".").reduce((s,n)=>s[n],p);return c(T,{children:[t("source",{media:"(min-width: 1440px)",srcSet:a}),t("img",{src:d,alt:`image number ${r+1}`})]},i.images.mobile)})}),t(h,{children:e.slides.map((i,r)=>t(B,{inView:r===y,onClick:()=>x(r),children:r+1},"slide to"+i.name))}),t(u,{children:e.slides.map((i,r)=>{var a;return c(j,{children:[(a=i.headers)==null?void 0:a.map((d,s)=>{const n=g[d.comp];return $.createElement(n,{...d.props,key:`slide${r+1}header${s+1}`})}),t(P,{color:"spaceBlue",children:i.description})]},`slide${r+1} info`)})})]})})};export{E as default};
