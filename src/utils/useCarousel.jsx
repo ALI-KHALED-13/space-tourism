@@ -8,7 +8,16 @@ export const useCarousel =(direction = "horizontal", breakPoint = 0)=> {
 
   const carouselRef = useRef([]); // interesting case of attatching one ref to multiple elms
   const screenWidth = useScreenWidth();
-  //const swipeDirection = useSwipe();
+
+
+  useSwipe({
+    slideInView,
+    slideTo,
+    carouselRef,
+    direction,
+    breakPoint,
+    screenWidth
+  });
 
   useEffect(()=> {
     if (carouselRef.current[1]){
@@ -21,11 +30,11 @@ export const useCarousel =(direction = "horizontal", breakPoint = 0)=> {
           elm.style.display = "flex";
         })
       }
-      setTimeout(()=> slideTo(slideInView), 500); // for titlting and screenSize changes adjustments (500 > 300 of media rendering)
+      setTimeout(()=> slideTo(slideInView), 500); // for titlting and screenSize changes adjustments
     }
   }, [carouselRef.current, screenWidth])
 
-  const slideTo = (idx)=> {
+  function slideTo (idx) {
     carouselRef.current.forEach(elm=> elm.scroll({
       behavior: "smooth",
       ...(direction === "vertical" && screenWidth > breakPoint?
@@ -37,7 +46,6 @@ export const useCarousel =(direction = "horizontal", breakPoint = 0)=> {
     
     setSlideinView(idx)
   }
-
   const carouselEssentialStyles = {
     width: "100%",
     overflow: "hidden",

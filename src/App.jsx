@@ -14,10 +14,9 @@ const Technology = React.lazy(()=> import('./pages/Technology'));
 /*
 - to do:
   * error boundry?
-  * swipe to slide
   * styling checking and code refactoring
   * one last check for page merging
-  * testing: cypress, unit?
+  * testing: cypress, unit for getCommonParent?
   * solidify the configs and spacetoon
 */
 

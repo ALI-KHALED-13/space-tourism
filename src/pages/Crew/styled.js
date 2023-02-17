@@ -96,8 +96,10 @@ export const StyledNavPoint = styled.li`
   height: 1rem;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, ${ ({inView})=>inView? 1: 0.17});
-  &:hover {
-    background-color: rgba(255, 255, 255, ${({inView})=> inView? 1: 0.5});
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(255, 255, 255, ${({inView})=> inView? 1: 0.5});
+    }
   }
   ${mediaQuery("md")}{
     width: 1.5rem; //intentional design change

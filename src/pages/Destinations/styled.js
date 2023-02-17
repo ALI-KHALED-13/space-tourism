@@ -91,8 +91,10 @@ export const StyledNavPoint = styled.li`
   color: ${({inView, theme: {colors}})=> inView? "white" : colors.spaceBlue};
 
   border-bottom: ${({inView})=> inView? "3px solid white" : "none"};
-  &:hover {
-    border-bottom: 3px solid rgba(255, 255, 255, ${({inView})=> inView? 1 : 0.5});
+  @media (hover: hover) { 
+    &:hover {
+      border-bottom: 3px solid rgba(255, 255, 255, ${({inView})=> inView? 1 : 0.5});
+    }
   }
 
   ${mediaQuery("md")}{
