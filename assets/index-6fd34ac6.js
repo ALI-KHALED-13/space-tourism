@@ -1,4 +1,4 @@
-import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as S}from"./index-b8161ff8.js";import{u as b,a as k,S as v,b as p}from"./index-3d25ede3.js";const h=o.ul`
+import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as S}from"./index-294c495f.js";import{u as b,a as k,S as v,b as p}from"./index-c6ccde24.js";const h=o.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -47,7 +47,7 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as S}from"./index-b816
   
 `,j=o.div`
   width: 100%;
-  padding: 2.4rem;
+  padding: 1rem 2.4rem;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;

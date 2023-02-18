@@ -1,4 +1,4 @@
-import{s as a,m as r,j as i,a as m,t as p,r as x}from"./index-b8161ff8.js";import{u as b,a as $,S,b as g}from"./index-3d25ede3.js";const c=a.ul`
+import{s as a,m as r,j as i,a as m,t as p,r as b}from"./index-294c495f.js";import{u as x,a as $,S,b as g}from"./index-c6ccde24.js";const c=a.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@ import{s as a,m as r,j as i,a as m,t as p,r as x}from"./index-b8161ff8.js";impor
   gap: 0.8rem;
   padding: 0 0.5rem;
   ${r("md")}{
-    justify-content: flex-end; // to be close to the dots in tablet mode
+    justify-content: center; // to be close to the dots in tablet mode
   }
   ${r("lg")}{
     gap: 1.5rem;
@@ -97,4 +97,4 @@ import{s as a,m as r,j as i,a as m,t as p,r as x}from"./index-b8161ff8.js";impor
     width: 1.8rem;
     height: 1.8rem;
   }
-`,{StyledParagraph:V}=p,T=({data:e,pageOrder:u})=>{const{InfoCarousel:h,MediaCarousel:f,slideTo:y,slideInView:w}=b();return $("Crew"),i(S,{order:u,title:e.title,children:m(C,{children:[i(f,{children:e.slides.map((t,n)=>{const l=t.images.desktop.split(".").reduce((s,o)=>s[o],g),d=t.images.mobile.split(".").reduce((s,o)=>s[o],g);return m(j,{children:[i("source",{media:"(min-width: 1440px)",srcSet:l}),i("img",{src:d,alt:`image number ${n+1}`})]},t.images.mobile)})}),i(c,{children:e.slides.map((t,n)=>i(v,{inView:n===w,onClick:()=>y(n)},"slide to"+t.name))}),i(h,{children:e.slides.map((t,n)=>{var l;return m(k,{children:[(l=t.headers)==null?void 0:l.map((d,s)=>{const o=p[d.comp];return x.createElement(o,{...d.props,key:`slide${n+1}header${s+1}`})}),i(V,{color:"spaceBlue",children:t.description})]},`slide ${n+1} info`)})})]})})};export{T as default};
+`,{StyledParagraph:V}=p,T=({data:e,pageOrder:u})=>{const{InfoCarousel:h,MediaCarousel:f,slideTo:y,slideInView:w}=x();return $("Crew"),i(S,{order:u,title:e.title,children:m(C,{children:[i(f,{children:e.slides.map((t,n)=>{const l=t.images.desktop.split(".").reduce((s,o)=>s[o],g),d=t.images.mobile.split(".").reduce((s,o)=>s[o],g);return m(j,{children:[i("source",{media:"(min-width: 1440px)",srcSet:l}),i("img",{src:d,alt:`image number ${n+1}`})]},t.images.mobile)})}),i(c,{children:e.slides.map((t,n)=>i(v,{inView:n===w,onClick:()=>y(n)},"slide to"+t.name))}),i(h,{children:e.slides.map((t,n)=>{var l;return m(k,{children:[(l=t.headers)==null?void 0:l.map((d,s)=>{const o=p[d.comp];return b.createElement(o,{...d.props,key:`slide${n+1}header${s+1}`})}),i(V,{color:"spaceBlue",children:t.description})]},`slide ${n+1} info`)})})]})})};export{T as default};
