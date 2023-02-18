@@ -34,7 +34,7 @@ export const StyledSlidingPic = styled.picture`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin: 3.2rem 0 0.3rem;
+  margin: 3.2rem 0 0.6rem;
   & > img {
     width: 47%;
   
@@ -60,13 +60,15 @@ export const StyledSlidingDiv = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 2rem;
+  gap: 3.2rem;
   padding: 0 2.4rem;
 
   ${mediaQuery("lg")}{
     text-align: left;
     align-items: flex-start;
     gap: 4rem;
+    padding: 0;
+    padding-right: 3rem;
   }
 `;
 
@@ -106,11 +108,8 @@ export const StyledNavPoint = styled.li`
 `;
 
 export const StyledStatsWrapper = styled.div`
-  border-top: 1px solid #383B4B;
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
-  padding: 3rem 0;
   gap: 2rem;
 
   ${mediaQuery("md")}{

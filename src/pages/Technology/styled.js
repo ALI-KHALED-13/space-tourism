@@ -56,7 +56,7 @@ export const StyledContainer = styled.div`
 
 export const StyledSlidingDiv = styled.div`
   width: 100%;
-  padding: 2.4rem;
+  padding: 1rem 2.4rem;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;

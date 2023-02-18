@@ -6,11 +6,11 @@ export const StyledNavMenu = styled.nav`
   background: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(40.7742px);
   position: fixed;
-  right: ${({open})=> open? 0: "-65%"};
+  right: ${({open})=> open? 0: "-67.7%"};
   top: 0;
   z-index: 5;
   height: 100%;
-  width: 65%;
+  width: 67.7%;
   transition: right 0.3s ease-in-out;
 `;
 

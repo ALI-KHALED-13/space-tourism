@@ -81,7 +81,7 @@ export const StyledSlidingDiv = styled.div`
   gap: 0.8rem;
   padding: 0 0.5rem;
   ${mediaQuery("md")}{
-    justify-content: flex-end; // to be close to the dots in tablet mode
+    justify-content: center; // to be close to the dots in tablet mode
   }
   ${mediaQuery("lg")}{
     gap: 1.5rem;

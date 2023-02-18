@@ -12,6 +12,10 @@ export const StyledHeader = styled.header`
   ${mediaQuery("md")}{
     padding: 0;
   }
+  ${mediaQuery("lg")}{
+    padding-top: 4rem;
+    padding-left: 5.5rem;
+  }
 `;
 
 export const StyledLogo = styled.img`

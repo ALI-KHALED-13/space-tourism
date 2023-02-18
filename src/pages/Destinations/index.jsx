@@ -57,7 +57,7 @@ const Destinations =({data, pageOrder})=> {
                   {slide.description}
                 </StyledParagraph>
               </div>
-
+              <hr />
               <StyledStatsWrapper>
                 {slide.stats.map((stat, idx)=> {
                   const [statKey, statValue] = stat;

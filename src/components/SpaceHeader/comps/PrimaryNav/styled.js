@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { mediaQuery } from "../../../../utils";
 
 
 export const StyledNavMenu = styled.nav`
@@ -7,6 +8,9 @@ export const StyledNavMenu = styled.nav`
   backdrop-filter: blur(40.7742px);
   height: 100%;
   padding: 0 4.5rem;
+  ${mediaQuery("lg")}{
+    padding: 0 12.5rem;
+  }
 `;
 
 export const StyledNavList = styled.ol`
@@ -22,6 +26,9 @@ export const StyledNavList = styled.ol`
   line-height: 17px;
 /* identical to box height */
   letter-spacing: 2.3625px;
+  ${mediaQuery("lg")}{
+    gap: 4.7rem;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`

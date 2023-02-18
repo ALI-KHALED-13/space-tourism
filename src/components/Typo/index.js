@@ -21,7 +21,7 @@ export const Heading1 = styled.h1`
   ${getBellefair()}
   line-height: 1.25;
   font-size: 8rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   
   ${mediaQuery("md")}{
     font-size: 15rem;
@@ -93,7 +93,6 @@ export const StyledParagraph = styled.p`
   font-size: 15px;
   line-height: 1.73;
 
-  margin: 1rem 0;
   color: ${({color, theme: {colors}})=> color && colors[color]};
 
   ${mediaQuery("md")}{
