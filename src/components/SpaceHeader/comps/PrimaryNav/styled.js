@@ -14,7 +14,7 @@ export const StyledNavMenu = styled.nav`
   }
 `;
 
-export const StyledNavList = styled.ol`
+export const StyledNavList = styled.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;

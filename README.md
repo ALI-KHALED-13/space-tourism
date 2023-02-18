@@ -16,8 +16,7 @@ choosing to use a JS-heavy approach, I used a local `data.json` configuration fi
 
 ## technologies used
 - React
-- styled.components (CSS)
-- DOM manipulation with plain JS (for mobile swiping and carousel cabaility)
+- DOM manipulation with plain JS (for mobile swiping and carousel capability)
 - Semantic HTML5 markup
 - Flexbox
 - CSS Grid
