@@ -90,16 +90,16 @@ export const StyledParagraph = styled.p`
   font-family: 'Barlow', sans-serif;;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 1.73;
 
   color: ${({color, theme: {colors}})=> color && colors[color]};
 
   ${mediaQuery("md")}{
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   ${mediaQuery("lg")}{
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 `;
 

@@ -14,7 +14,6 @@ const Technology = React.lazy(()=> import('./pages/Technology'));
 /*
 - to do:
   * error boundry?
-  * styling checking and code refactoring
   * one last check for page merging
   * testing: cypress, unit for getCommonParent?
   * solidify the configs and spacetoon
@@ -24,7 +23,7 @@ const Technology = React.lazy(()=> import('./pages/Technology'));
 function App() {
   const {pathname} = useLocation();
 
-  const pagesComps = {Crew, Destinations, Technology};
+  const pagesComps = {Crew, Destinations, Technology, Home};
 
   return (
     <ThemeProvider theme={{colors}}>
@@ -32,16 +31,14 @@ function App() {
   
       <SpaceHeader appPages={appPages}/>
       <Suspense fallback={<SpaceLoader />}>
-        <Routes>
-          <Route path="/" element={<Home nextPagePath={appPages[0].href.path}/>}/>
-          
+        <Routes>         
           {appPages.map((page, idx)=> {
             const Comp = pagesComps[page.comp];
             return (
               <Route
                 key={page.comp + idx}
                 path={page.href.path}
-                element={<Comp data={page.data} pageOrder={idx + 1}/>}
+                element={<Comp data={page.data} pageOrder={idx}/>}
               />
             )
           })}  

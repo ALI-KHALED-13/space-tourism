@@ -1,5 +1,39 @@
 [ 
   {
+    "comp": "Home",
+    "pageTpl" : "introductory",
+    "href": {
+      "path": "/",
+      "display": "home"
+    },
+    "data": {
+      "nextPagePath" : "/destinations",
+      "exploreBtnText": "explore",
+      "blocks": [
+        {
+          "comp": "Heading2",
+          "props": {
+            "children": "so, you want to travel to",
+            "color": "spaceBlue"
+          }
+        },
+        {
+          "comp": "Heading1",
+          "props": {
+            "children": "SPACE"
+          }
+        },
+        {
+          "comp": "StyledParagraph",
+          "props": {
+            "children": "Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!",
+            "color": "spaceBlue"
+          }
+        }
+      ]
+    }
+  },
+  {
     "comp": "Destinations",
     "pageTpl" : "Infographic",
     "href": {
@@ -97,7 +131,6 @@
       ]
     }
   },
-
   {
     "comp": "Crew",
     "pageTpl" : "Infographic",
@@ -205,7 +238,7 @@
       ]
     }
   },
-    {
+  {
     "comp": "Technology",
     "pageTpl" : "Infographic",
     "href": {

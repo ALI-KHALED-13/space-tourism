@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {X} from "phosphor-react";
 import { NavLink } from "react-router-dom";
+import { getDenseBarlow } from "../../../Typo";
 
 export const StyledNavMenu = styled.nav`
   background: rgba(255, 255, 255, 0.07);
@@ -26,9 +27,7 @@ export const StyledXSign = styled(X)`
 
 export const StyledNavList = styled.ol`
   list-style-type: none;
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 400;
+  ${getDenseBarlow()}
   font-size: 1.8rem;
   line-height: 19px;
   letter-spacing: 2.7px;
@@ -40,7 +39,6 @@ export const StyledNavLink = styled(NavLink)`
   padding: 1rem 4rem;
   margin: 2rem 0;
   border-radius: 2px;
-  text-transform: uppercase;
   cursor: pointer;
   
   &.active { // added automatically by react-router NavLink component

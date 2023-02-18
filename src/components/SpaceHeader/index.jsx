@@ -9,8 +9,7 @@ import { Link } from "react-router-dom";
 const SpaceHeader =({appPages})=> {
   const screenWidth = useScreenWidth();
 
-  const pagesLinks = appPages.map(page=> page.href);
-  const navLinks = [{path:"/", display:"home"}].concat(pagesLinks);
+  const navLinks = appPages.map(page=> page.href);
 
   return (
     <StyledHeader>

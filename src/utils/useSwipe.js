@@ -38,9 +38,9 @@ export const useSwipe =({
   }, [carouselRef.current])
 
   const slideCarousel =(start, end)=> {
-    if (end > start + 50 && slideInView > 0) {
+    if (end > start + 35 && slideInView > 0) {
       slideTo(slideInView - 1);
-    } else if (start > end  + 50 && slideInView < carouselRef.current[0].children.length - 1){
+    } else if (start > end  + 35 && slideInView < carouselRef.current[0].children.length - 1){
       slideTo(slideInView + 1);
     }
   }

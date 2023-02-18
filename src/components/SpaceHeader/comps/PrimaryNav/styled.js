@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { mediaQuery } from "../../../../utils";
+import { getDenseBarlow } from "../../../Typo";
 
 
 export const StyledNavMenu = styled.nav`
@@ -19,13 +20,11 @@ export const StyledNavList = styled.ol`
   justify-content: center;
   align-items: center;
   gap: 3.7rem;
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 400;
+  ${getDenseBarlow()}
   font-size: 1.8rem;
-  line-height: 17px;
-/* identical to box height */
+  line-height: 1;
   letter-spacing: 2.3625px;
+
   ${mediaQuery("lg")}{
     gap: 4.7rem;
   }
@@ -36,7 +35,6 @@ export const StyledNavLink = styled(NavLink)`
   display: block;
   padding: 4rem 0.2rem;
   cursor: pointer;
-  text-transform: uppercase;
   @media (hover: hover) { // to exclude tablets that don't have hover effect
     &:hover {
       border-bottom: 4px solid rgba(255, 255, 255, 0.5);
