@@ -1,4 +1,4 @@
-import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as S}from"./index-9efd0557.js";import{u as b,a as k,S as v,b as p}from"./index-c6556d97.js";const h=o.ul`
+import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as b}from"./index-3cba2d2d.js";import{u as S,a as k,S as v,b as p}from"./index-d6bbd6e2.js";const h=o.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -24,6 +24,7 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as S}from"./index-9efd
   }
 
   ${l("lg")}{
+    padding-bottom: 10rem;
     grid-template-columns: 1fr 4.5fr 4.5fr;
     align-items: center;
     justify-items: start;
@@ -100,4 +101,4 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as S}from"./index-9efd
     font-size: 32px;
     line-height: 37px;
   }
-`,{StyledParagraph:P}=g,E=({data:e,pageOrder:m})=>{const{InfoCarousel:u,MediaCarousel:f,slideTo:x,slideInView:y}=b("vertical",S("lg"));return k("Technology"),t(v,{order:m,title:e.title,children:c(C,{children:[t(f,{children:e.slides.map((i,r)=>{const a=i.images.desktop.split(".").reduce((s,n)=>s[n],p),d=i.images.mobile.split(".").reduce((s,n)=>s[n],p);return c(T,{children:[t("source",{media:"(min-width: 1440px)",srcSet:a}),t("img",{src:d,alt:`image number ${r+1}`})]},i.images.mobile)})}),t(h,{children:e.slides.map((i,r)=>t(B,{inView:r===y,onClick:()=>x(r),children:r+1},"slide to"+i.name))}),t(u,{children:e.slides.map((i,r)=>{var a;return c(j,{children:[(a=i.headers)==null?void 0:a.map((d,s)=>{const n=g[d.comp];return $.createElement(n,{...d.props,key:`slide${r+1}header${s+1}`})}),t(P,{color:"spaceBlue",children:i.description})]},`slide${r+1} info`)})})]})})};export{E as default};
+`,{StyledParagraph:P}=g,E=({data:e,pageOrder:m})=>{const{InfoCarousel:u,MediaCarousel:f,slideTo:x,slideInView:y}=S("vertical",b("lg"));return k("Technology"),t(v,{order:m,title:e.title,children:c(C,{children:[t(f,{children:e.slides.map((i,r)=>{const a=i.images.desktop.split(".").reduce((s,n)=>s[n],p),d=i.images.mobile.split(".").reduce((s,n)=>s[n],p);return c(T,{children:[t("source",{media:"(min-width: 1440px)",srcSet:a}),t("img",{src:d,alt:`image number ${r+1}`})]},i.images.mobile)})}),t(h,{children:e.slides.map((i,r)=>t(B,{inView:r===y,onClick:()=>x(r),children:r+1},"slide to"+i.name))}),t(u,{children:e.slides.map((i,r)=>{var a;return c(j,{children:[(a=i.headers)==null?void 0:a.map((d,s)=>{const n=g[d.comp];return $.createElement(n,{...d.props,key:`slide${r+1}header${s+1}`})}),t(P,{color:"spaceBlue",children:i.description})]},`slide${r+1} info`)})})]})})};export{E as default};
