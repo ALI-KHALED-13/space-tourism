@@ -20,7 +20,7 @@ const SpaceHeader =({appPages})=> {
       {screenWidth < getBreakPoint("md")?
        <MobileNav navLinks={navLinks}/>
        :
-       <PrimaryNav navLinks={navLinks} />
+       <PrimaryNav navLinks={navLinks} screenWidth={screenWidth}/>
       }
     </StyledHeader>
   );

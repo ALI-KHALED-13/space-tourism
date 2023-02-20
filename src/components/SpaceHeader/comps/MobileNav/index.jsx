@@ -28,7 +28,7 @@ export const MobileNav =({navLinks})=> {
                 onClick={closeNavigationMenu}
               >
                 <span className="counter">
-                {idx > 9 ? idx : "0" + idx}
+                  {(idx + "").padStart(2, "0")}
                 </span>
 
                 {link.display}

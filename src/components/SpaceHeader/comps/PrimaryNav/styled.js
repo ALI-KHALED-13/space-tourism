@@ -35,12 +35,19 @@ export const StyledNavLink = styled(NavLink)`
   display: block;
   padding: 4rem 0.2rem;
   cursor: pointer;
+  border-bottom: 4px solid rgba(255, 255, 255, 0);
+  
+  & .counter {
+    font-weight: 700;
+    margin-right: 1rem;
+  }
+
   @media (hover: hover) { // to exclude tablets that don't have hover effect
     &:hover {
-      border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+      border-color: rgba(255, 255, 255, 0.5);
     }
   }
   &.active { // added automatically by react-router NavLink component
-    border-bottom: 4px solid white;
+    border-color: white;
   }
 `;

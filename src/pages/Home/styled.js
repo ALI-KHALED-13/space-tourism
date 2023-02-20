@@ -73,7 +73,7 @@ export const StyledExploreButton = styled.button`
     margin-top: unset; 
   }
   &:hover ${StyledHalo} {
-    transform: scale(2);
+    transform: scale(1.65);
   }
 `;
 

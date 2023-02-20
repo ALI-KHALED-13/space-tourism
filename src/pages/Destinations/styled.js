@@ -92,7 +92,8 @@ export const StyledNavPoint = styled.li`
   padding: 0.8rem 0.1rem;
   color: ${({inView, theme: {colors}})=> inView? "white" : colors.spaceBlue};
 
-  border-bottom: ${({inView})=> inView? "3px solid white" : "none"};
+  border-bottom: 3px solid rgba(255, 255, 255, ${({inView})=> inView? 1 : 0});
+  
   @media (hover: hover) { 
     &:hover {
       border-bottom: 3px solid rgba(255, 255, 255, ${({inView})=> inView? 1 : 0.5});

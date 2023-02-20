@@ -6,7 +6,7 @@ export const SpaceSection =({title, order, children})=> {
   return (
     <StyledSection>
       <Heading2>
-        <StyledOrder>{order > 9 ? order: "0" + order}</StyledOrder>
+        <StyledOrder>{(order + "").padStart(2, "0")}</StyledOrder>
         {title}
       </Heading2>
       {children}
