@@ -1,0 +1,328 @@
+[ 
+  {
+    "comp": "Home",
+    "pageTpl" : "introductory",
+    "href": {
+      "path": "/",
+      "display": "home"
+    },
+    "data": {
+      "nextPagePath" : "/planets",
+      "exploreBtnText": "explore",
+      "blocks": [
+        {
+          "comp": "Heading2",
+          "props": {
+            "children": "so, you might still remember",
+            "color": "spaceBlue"
+          }
+        },
+        {
+          "comp": "Heading3",
+          "props": {
+            "children": "SPACETOON",
+            "L": true,
+            "style": {
+              "color": "yellow",
+              "textShadow": "2px 2px 5px blue"
+            }
+          }
+        },
+        {
+          "comp": "StyledParagraph",
+          "props": {
+            "children": "Let’s face it; Most 90s Arab kids were raised watching this great cartoon channel. if you want to travel back in time to your childhood and get a strong nostalgia hit, Well sit back, and relax because we’ll give you a really fun experience! 😁",
+            "color": "white"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "comp": "Destinations",
+    "pageTpl" : "Infographic",
+    "href": {
+      "path": "/planets",
+      "display": "planets"
+    },
+    "data": {
+      "title": "Explore the planets",
+      "carouselType": "nomial",
+      "slides": [
+        { 
+         "name": "adventures",
+          "images": {
+            "mobile": "destinations.adventures.webp",
+            "desktop": "destinations.adventures.png"
+          },
+          "headers": [
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "adventures"
+              }
+            }
+          ],
+          "description": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites."
+        },
+        { 
+         "name": "action",
+          "images": {
+            "mobile": "destinations.action.webp",
+            "desktop": "destinations.action.png"
+          },
+          "headers": [
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "action"
+              }
+            }
+          ],
+          "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!"
+        },
+        { 
+         "name": "comedia",
+          "images": {
+            "mobile": "destinations.comedia.webp",
+            "desktop": "destinations.comedia.png"
+          },
+          "headers": [
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "comedia"
+              }
+            }
+          ],
+          "description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin."
+        },
+        { 
+         "name": "sports",
+          "images": {
+            "mobile": "destinations.sports.webp",
+            "desktop": "destinations.sports.png"
+          },
+          "headers": [
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "sports"
+              }
+            }
+          ],
+          "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn."
+        }
+      ]
+    }
+  },
+  {
+    "comp": "Technology",
+    "pageTpl" : "Infographic",
+    "href": {
+      "path": "/shows",
+      "display": "shows"
+    },
+    "data":{
+      "title": "Pick your show",
+      "carouselType": "numerical",
+      "slides":[
+        {
+         "name": "slamDunk",
+          "images": {
+            "mobile": "shows.slamDunk.landscape",
+            "desktop": "shows.slamDunk.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "sports planet",
+                "color": "spaceBlue"
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "slam dunk"
+              }
+            }
+          ],
+          "description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+        },
+        {
+         "name": "conan",
+          "images": {
+            "mobile": "shows.conan.landscape",
+            "desktop": "shows.conan.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "the terminology ...",
+                "color": "spaceBlue"
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "conan"
+              }
+            }
+          ],
+          "description": "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
+        },
+        {
+          "name": "friends",
+          "images": {
+            "mobile": "shows.friends.landscape",
+            "desktop": "shows.friends.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "the terminology ...",
+                "color": "spaceBlue"
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "friend's vow"
+              }
+            }
+          ],
+          "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+        },
+        {
+          "name": "hunter",
+          "images": {
+            "mobile": "shows.hunter.landscape",
+            "desktop": "shows.hunter.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "the terminology ...",
+                "color": "spaceBlue"
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "hunter x hunter"
+              }
+            }
+          ],
+          "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+        },
+        {
+          "name": "zoro",
+          "images": {
+            "mobile": "shows.zoro.landscape",
+            "desktop": "shows.zoro.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "the terminology ...",
+                "color": "spaceBlue"
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "zoro"
+              }
+            }
+          ],
+          "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+        }
+      ]
+    }
+  },
+  {
+    "comp": "Crew",
+    "pageTpl" : "Infographic",
+    "href": {
+      "path": "/crew",
+      "display": "crew"
+    },
+    "data":{
+      "title": "known figures",
+      "carouselType": "dots",
+      "slides":[
+          {
+           "name": "Tarek",
+            "images": {
+              "mobile": "crew.tarek.webp"
+            },
+            "headers": [
+              {
+                "comp": "Subheading1",
+                "props": {
+                  "children": "Commander",
+                  "style": {"color": "white", "opacity": 0.5}
+                }
+              },
+              {
+                "comp": "Heading3",
+                "props": {
+                  "children": "Tarke"
+                }
+              }
+            ],
+            "description": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
+          },
+          {
+           "name": "Rasha",
+            "images": {
+              "mobile": "crew.rasha.webp"
+            },
+            "headers": [
+              {
+                "comp": "Subheading1",
+                "props": {
+                  "children": "Mission Specialist",
+                  "style": {"color": "white", "opacity": 0.5}
+                }
+              },
+              {
+                "comp": "Heading3",
+                "props": {
+                  "children": "Rasha"
+                }
+              }
+            ],
+            "description": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to EST. travel time to space as a space tourist."
+          },
+          {
+           "name": "mamoun",
+            "images": {
+              "mobile": "crew.mamoun.webp"
+            },
+            "headers": [
+              {
+                "comp": "Subheading1",
+                "props": {
+                  "children": "Pilot",
+                  "style": {"color": "white", "opacity": 0.5}
+                }
+              },
+              {
+                "comp": "Heading3",
+                "props": {
+                  "children": "mamoun"
+                }
+              }
+            ],
+            "description": "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer."
+          }
+      ]
+    }
+  }
+]

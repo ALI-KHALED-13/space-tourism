@@ -11,7 +11,7 @@ const Crew =({data, pageOrder})=> {
 
   const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel();
 
-  useUpdateTitle("Crew");
+  useUpdateTitle(data.title);
 
   return (
     <SpaceSection order={pageOrder} title={data.title}>
@@ -19,7 +19,7 @@ const Crew =({data, pageOrder})=> {
 
         <MediaCarousel>
           {data.slides.map((slide, idx)=> {
-            const desktopVariant = slide.images.desktop.split(".").reduce((obj, key)=> obj[key] , assets);
+            const desktopVariant = slide.images.desktop?.split(".").reduce((obj, key)=> obj[key] , assets);
             const mobileVariant = slide.images.mobile.split(".").reduce((obj, key)=> obj[key] , assets);
 
             return (

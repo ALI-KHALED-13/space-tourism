@@ -1,12 +1,11 @@
 import { StyledHeader, StyledLogo } from "./styled";
-import logo from "../../assets/shared/logo.svg"
 
 import { getBreakPoint, useScreenWidth } from "../../utils";
 import { MobileNav } from "./comps/MobileNav";
 import { PrimaryNav } from "./comps/PrimaryNav";
 import { Link } from "react-router-dom";
 
-const SpaceHeader =({appPages})=> {
+const SpaceHeader =({appPages, logo})=> {
   const screenWidth = useScreenWidth();
 
   const navLinks = appPages.map(page=> page.href);

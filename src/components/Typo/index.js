@@ -6,14 +6,14 @@ export const getBellefair =()=> css`
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
-  color: ${({color, theme: {colors}})=> color && colors[color]};
+  color: ${({color, theme: {colors}})=> color && (colors[color] || color)};
 `;
 export const getDenseBarlow =()=> css`
   font-family: 'Barlow Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
-  color: ${({color, theme: {colors}})=> color && colors[color]};
+  color: ${({color, theme: {colors}})=> color && (colors[color] || color)};
 `;
 
 
@@ -93,7 +93,7 @@ export const StyledParagraph = styled.p`
   font-size: 1.5rem;
   line-height: 1.73;
 
-  color: ${({color, theme: {colors}})=> color && colors[color]};
+  color: ${({color, theme: {colors}})=> color && (colors[color] || color)};
 
   ${mediaQuery("md")}{
     font-size: 1.6rem;

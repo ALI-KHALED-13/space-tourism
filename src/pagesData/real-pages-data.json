@@ -145,8 +145,8 @@
           {
            "name": "Douglas Hurley",
             "images": {
-              "mobile": "crew.douglas.png",
-              "desktop": "crew.douglas.webp"
+              "mobile": "crew.douglas.webp",
+              "desktop": "crew.douglas.png"
             },
             "headers": [
               {
