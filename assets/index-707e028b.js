@@ -1,4 +1,4 @@
-import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as b}from"./index-3cba2d2d.js";import{u as S,a as k,S as v,b as p}from"./index-d6bbd6e2.js";const h=o.ul`
+import{s as n,m as l,b as $,j as t,a as p,t as h,r as b,c as S}from"./index-6119ec2a.js";import{u as k,a as v,S as C,b as g}from"./index-2751c992.js";const u=n.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as b}from"./index-3cba
     flex-direction: column;
     gap: 3.2rem;
   }
-`,C=o.div`
+`,j=n.div`
   display: grid;
   gap: 2.6rem;
   padding-top: 3.2rem;
@@ -24,8 +24,9 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as b}from"./index-3cba
   }
 
   ${l("lg")}{
+    max-width: 130rem;
     padding-bottom: 10rem;
-    grid-template-columns: 1fr 4.5fr 4.5fr;
+    grid-template-columns: 1fr 4.5fr 4fr;
     align-items: center;
     justify-items: start;
     column-gap: 8rem;
@@ -34,7 +35,7 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as b}from"./index-3cba
       grid-row: 1 / 2;
       grid-column: 3 / 4;
     }
-    & ${h} {
+    & ${u} {
       grid-row: 1 / 2;
       grid-column: 1 / 2;
     }
@@ -46,7 +47,7 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as b}from"./index-3cba
     }
   }
   
-`,j=o.div`
+`,B=n.div`
   width: 100%;
   padding: 1rem 2.4rem;
   flex-shrink: 0;
@@ -59,7 +60,7 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as b}from"./index-3cba
     align-items: flex-start;
     text-align: left;
   }
-`,T=o.picture`
+`,P=n.picture`
   width: 100%;
   flex-shrink: 0;
   display: flex;
@@ -70,14 +71,14 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as b}from"./index-3cba
   & > img {
     width: 100%;
   }
-`,B=o.li`
+`,T=n.li`
   cursor: pointer;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  ${w()}
+  ${$()}
   font-size: 16px;
   line-height: 18px;
   background-color: ${({inView:e})=>e?"white":"transparent"};
@@ -101,4 +102,4 @@ import{s as o,m as l,b as w,j as t,a as c,t as g,r as $,c as b}from"./index-3cba
     font-size: 32px;
     line-height: 37px;
   }
-`,{StyledParagraph:P}=g,E=({data:e,pageOrder:m})=>{const{InfoCarousel:u,MediaCarousel:f,slideTo:x,slideInView:y}=S("vertical",b("lg"));return k("Technology"),t(v,{order:m,title:e.title,children:c(C,{children:[t(f,{children:e.slides.map((i,r)=>{const a=i.images.desktop.split(".").reduce((s,n)=>s[n],p),d=i.images.mobile.split(".").reduce((s,n)=>s[n],p);return c(T,{children:[t("source",{media:"(min-width: 1440px)",srcSet:a}),t("img",{src:d,alt:`image number ${r+1}`})]},i.images.mobile)})}),t(h,{children:e.slides.map((i,r)=>t(B,{inView:r===y,onClick:()=>x(r),children:r+1},"slide to"+i.name))}),t(u,{children:e.slides.map((i,r)=>{var a;return c(j,{children:[(a=i.headers)==null?void 0:a.map((d,s)=>{const n=g[d.comp];return $.createElement(n,{...d.props,key:`slide${r+1}header${s+1}`})}),t(P,{color:"spaceBlue",children:i.description})]},`slide${r+1} info`)})})]})})};export{E as default};
+`,{StyledParagraph:V}=h,I=({data:e,pageOrder:m})=>{const{InfoCarousel:f,MediaCarousel:x,slideTo:y,slideInView:w}=k("vertical",S("lg"));return v(e.title),t(C,{order:m,title:e.title,children:p(j,{children:[t(x,{children:e.slides.map((i,r)=>{var d;const o=(d=i.images.desktop)==null?void 0:d.split(".").reduce((s,c)=>s[c],g),a=i.images.mobile.split(".").reduce((s,c)=>s[c],g);return p(P,{children:[t("source",{media:"(min-width: 1440px)",srcSet:o}),t("img",{src:a,alt:`image number ${r+1}`})]},i.images.mobile)})}),t(u,{children:e.slides.map((i,r)=>t(T,{inView:r===w,onClick:()=>y(r),children:r+1},"slide to"+i.name))}),t(f,{children:e.slides.map((i,r)=>{var o;return p(B,{children:[(o=i.headers)==null?void 0:o.map((a,d)=>{const s=h[a.comp];return b.createElement(s,{...a.props,key:`slide${r+1}header${d+1}`})}),t(V,{color:"spaceBlue",children:i.description})]},`slide${r+1} info`)})})]})})};export{I as default};

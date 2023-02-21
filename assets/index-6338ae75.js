@@ -1,4 +1,4 @@
-import{s as a,m as r,j as i,a as m,t as p,r as b}from"./index-3cba2d2d.js";import{u as x,a as $,S,b as g}from"./index-d6bbd6e2.js";const c=a.ul`
+import{s as o,m as r,j as i,a as c,t as u,r as x}from"./index-6119ec2a.js";import{u as $,a as S,S as C,b as p}from"./index-2751c992.js";const g=o.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -6,7 +6,7 @@ import{s as a,m as r,j as i,a as m,t as p,r as b}from"./index-3cba2d2d.js";impor
   ${r("lg")}{
     gap: 2.4rem;
   }
-`,C=a.div`
+`,j=o.div`
   display: grid;
   gap: 3.2rem;
   padding: 2rem;
@@ -20,7 +20,7 @@ import{s as a,m as r,j as i,a as m,t as p,r as b}from"./index-3cba2d2d.js";impor
     & .mediaCarousel {
       grid-row: 3/4;
     }
-    & ${c} {
+    & ${g} {
       grid-row: 2/3;
     }
   }
@@ -37,14 +37,14 @@ import{s as a,m as r,j as i,a as m,t as p,r as b}from"./index-3cba2d2d.js";impor
       grid-column: 2/3;
       grid-row: 1/3;
     }
-    & ${c} {
+    & ${g} {
       align-self: center;
     }
     & .infoCarousel {
       text-align: left;
     }
   }
-`,j=a.picture`
+`,k=o.picture`
   width: 100%;
   flex-shrink: 0;
   display: flex;
@@ -62,7 +62,7 @@ import{s as a,m as r,j as i,a as m,t as p,r as b}from"./index-3cba2d2d.js";impor
       width: 90%;
     }
   }
-`,k=a.div`
+`,v=o.div`
   width: 100%;
   flex-shrink: 0;
   display: flex;
@@ -78,7 +78,7 @@ import{s as a,m as r,j as i,a as m,t as p,r as b}from"./index-3cba2d2d.js";impor
     text-align: left;
     align-items: flex-start;
   }
-`,v=a.li`
+`,V=o.li`
   cursor: pointer;
   width: 1rem;
   height: 1rem;
@@ -97,4 +97,4 @@ import{s as a,m as r,j as i,a as m,t as p,r as b}from"./index-3cba2d2d.js";impor
     width: 1.8rem;
     height: 1.8rem;
   }
-`,{StyledParagraph:V}=p,T=({data:e,pageOrder:u})=>{const{InfoCarousel:h,MediaCarousel:f,slideTo:y,slideInView:w}=x();return $("Crew"),i(S,{order:u,title:e.title,children:m(C,{children:[i(f,{children:e.slides.map((t,n)=>{const l=t.images.desktop.split(".").reduce((s,o)=>s[o],g),d=t.images.mobile.split(".").reduce((s,o)=>s[o],g);return m(j,{children:[i("source",{media:"(min-width: 1440px)",srcSet:l}),i("img",{src:d,alt:`image number ${n+1}`})]},t.images.mobile)})}),i(c,{children:e.slides.map((t,n)=>i(v,{inView:n===w,onClick:()=>y(n)},"slide to"+t.name))}),i(h,{children:e.slides.map((t,n)=>{var l;return m(k,{children:[(l=t.headers)==null?void 0:l.map((d,s)=>{const o=p[d.comp];return b.createElement(o,{...d.props,key:`slide${n+1}header${s+1}`})}),i(V,{color:"spaceBlue",children:t.description})]},`slide ${n+1} info`)})})]})})};export{T as default};
+`,{StyledParagraph:B}=u,E=({data:e,pageOrder:h})=>{const{InfoCarousel:f,MediaCarousel:y,slideTo:b,slideInView:w}=$();return S(e.title),i(C,{order:h,title:e.title,children:c(j,{children:[i(y,{children:e.slides.map((t,n)=>{var d;const a=(d=t.images.desktop)==null?void 0:d.split(".").reduce((s,m)=>s[m],p),l=t.images.mobile.split(".").reduce((s,m)=>s[m],p);return c(k,{children:[i("source",{media:"(min-width: 1440px)",srcSet:a}),i("img",{src:l,alt:`image number ${n+1}`})]},t.images.mobile)})}),i(g,{children:e.slides.map((t,n)=>i(V,{inView:n===w,onClick:()=>b(n)},"slide to"+t.name))}),i(f,{children:e.slides.map((t,n)=>{var a;return c(v,{children:[(a=t.headers)==null?void 0:a.map((l,d)=>{const s=u[l.comp];return x.createElement(s,{...l.props,key:`slide${n+1}header${d+1}`})}),i(B,{color:"spaceBlue",children:t.description})]},`slide ${n+1} info`)})})]})})};export{E as default};

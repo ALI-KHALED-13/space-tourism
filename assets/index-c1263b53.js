@@ -1,4 +1,4 @@
-import{s as o,m as r,g as $,j as e,a as d,t as h,r as S}from"./index-3cba2d2d.js";import{u as w,a as b,S as v,b as g}from"./index-d6bbd6e2.js";const j=o.div`
+import{s as d,m as r,g as w,j as e,a as o,t as u,r as S,F as b}from"./index-6119ec2a.js";import{u as v,a as j,S as C,b as h}from"./index-2751c992.js";const k=d.div`
   display: grid;
   gap: 2rem;
 
@@ -8,17 +8,18 @@ import{s as o,m as r,g as $,j as e,a as d,t as h,r as S}from"./index-3cba2d2d.js
     gap: 3rem;
   }
   ${r("lg")}{
-    max-width: unset;
+    max-width: 130rem;
     margin: 6.5rem auto;
     justify-items: start;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 9fr;
     column-gap: 12rem;
 
     & .mediaCarousel {
       grid-row: 1 / 3;
     }
   }
-`,C=o.picture`
+`,V=d.picture`
   width: 100%;
   flex-shrink: 0;
   display: flex;
@@ -43,7 +44,7 @@ import{s as o,m as r,g as $,j as e,a as d,t as h,r as S}from"./index-3cba2d2d.js
       width: 90%;
     }
   }
-`,k=o.div`
+`,B=d.div`
   width: 100%;
   flex-shrink: 0;
   display: flex;
@@ -59,7 +60,7 @@ import{s as o,m as r,g as $,j as e,a as d,t as h,r as S}from"./index-3cba2d2d.js
     padding: 0;
     padding-right: 3rem;
   }
-`,V=o.ul`
+`,D=d.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -68,14 +69,14 @@ import{s as o,m as r,g as $,j as e,a as d,t as h,r as S}from"./index-3cba2d2d.js
   ${r("md")}{
     gap: 3.6rem;
   }
-`,B=o.li`
+`,P=d.li`
   cursor: pointer;
-  ${$()};
+  ${w()};
   font-size: 1.4rem;
   line-height: 17px;
   letter-spacing: 2.3625px;
   padding: 0.8rem 0.1rem;
-  color: ${({inView:i,theme:{colors:c}})=>i?"white":c.spaceBlue};
+  color: ${({inView:i,theme:{colors:p}})=>i?"white":p.spaceBlue};
 
   border-bottom: 3px solid rgba(255, 255, 255, ${({inView:i})=>i?1:0});
   
@@ -91,7 +92,7 @@ import{s as o,m as r,g as $,j as e,a as d,t as h,r as S}from"./index-3cba2d2d.js
     line-height: 19px;
     letter-spacing: 2.7px;
   }
-`,D=o.div`
+`,T=d.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -101,4 +102,4 @@ import{s as o,m as r,g as $,j as e,a as d,t as h,r as S}from"./index-3cba2d2d.js
     justify-content: space-around;
     gap: 5rem;
   }
-`,{Heading4:P,StyledParagraph:T,Subheading2:z}=h,N=({data:i,pageOrder:c})=>{const{InfoCarousel:u,MediaCarousel:f,slideTo:x,slideInView:y}=w();return b("Destinations"),e(v,{order:c,title:i.title,children:d(j,{children:[e(f,{children:i.slides.map((t,n)=>{const m=t.images.desktop.split(".").reduce((a,s)=>a[s],g),l=t.images.mobile.split(".").reduce((a,s)=>a[s],g);return d(C,{children:[e("source",{media:"(min-width: 1440px)",srcSet:m}),e("img",{src:l,alt:`image number ${n+1}`})]},t.images.mobile)})}),e(V,{children:i.slides.map((t,n)=>e(B,{inView:n===y,onClick:()=>x(n),children:t.name},"slide to"+t.name))}),e(u,{children:i.slides.map((t,n)=>{var m;return d(k,{children:[d("div",{children:[(m=t.headers)==null?void 0:m.map((l,a)=>{const s=h[l.comp];return S.createElement(s,{...l.props,key:`slide${n+1}header${a+1}`})}),e(T,{color:"spaceBlue",children:t.description})]}),e("hr",{}),e(D,{children:t.stats.map((l,a)=>{const[s,p]=l;return d("div",{children:[e(z,{color:"spaceBlue",children:s}),e(P,{children:p})]},p+a)})})]},`slide${n+1} info`)})})]})})};export{N as default};
+`,{Heading4:z,StyledParagraph:E,Subheading2:F}=u,H=({data:i,pageOrder:p})=>{const{InfoCarousel:f,MediaCarousel:x,slideTo:y,slideInView:$}=v();return j(i.title),e(C,{order:p,title:i.title,children:o(k,{children:[e(x,{children:i.slides.map((t,a)=>{var n;const m=(n=t.images.desktop)==null?void 0:n.split(".").reduce((s,l)=>s[l],h),c=t.images.mobile.split(".").reduce((s,l)=>s[l],h);return o(V,{children:[e("source",{media:"(min-width: 1440px)",srcSet:m}),e("img",{src:c,alt:`image number ${a+1}`})]},t.images.mobile)})}),e(D,{children:i.slides.map((t,a)=>e(P,{inView:a===$,onClick:()=>y(a),children:t.name},"slide to"+t.name))}),e(f,{children:i.slides.map((t,a)=>{var m,c;return o(B,{children:[o("div",{children:[(m=t.headers)==null?void 0:m.map((n,s)=>{const l=u[n.comp];return S.createElement(l,{...n.props,key:`slide${a+1}header${s+1}`})}),e(E,{color:"spaceBlue",children:t.description})]}),t.stats&&o(b,{children:[e("hr",{}),e(T,{children:(c=t.stats)==null?void 0:c.map((n,s)=>{const[l,g]=n;return o("div",{children:[e(F,{color:"spaceBlue",children:l}),e(z,{children:g})]},g+s)})})]})]},`slide${a+1} info`)})})]})})};export{H as default};
