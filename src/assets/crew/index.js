@@ -10,6 +10,9 @@ import markPng from './image-mark-shuttleworth.png';
 import victorWebp from './image-victor-glover.webp';
 import victorPng from './image-victor-glover.png';
 
+import tarikWebp from './tarik.webp';
+import rashaWebp from './rasha.webp';
+import mamounWebp from './mamoun-ferkh.webp';
 
 export default {
   anousheh: {
@@ -28,4 +31,13 @@ export default {
     png: victorPng,
     webp: victorWebp
   },
+  tarek: {
+    webp: tarikWebp
+  },
+  rasha: {
+    webp: rashaWebp
+  },
+  mamoun: {
+    webp: mamounWebp
+  }
 }

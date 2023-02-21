@@ -10,6 +10,18 @@ import marsPng from './image-mars.png';
 import europaWebp from './image-europa.webp';
 import europaPng from './image-europa.png';
 
+import actionWebp from './action.webp';
+import actionPng from './action.png';
+
+import adventuresWebp from './adventures.webp';
+import adventuresPng from './adventures.png';
+
+import comediaWebp from './comedia.webp';
+import comediaPng from './comedia.png';
+
+import sportsWebp from './sports.webp';
+import sportsPng from './sports.png';
+
 
 export default {
   moon: {
@@ -28,4 +40,20 @@ export default {
     png: europaPng,
     webp: europaWebp
   },
+  action: {
+    png: actionPng,
+    webp: actionWebp
+  },
+  adventure: {
+    png: adventuresPng,
+    webp: adventuresWebp
+  },
+  comedia: {
+    png: comediaPng,
+    webp: comediaWebp
+  },
+  sports: {
+    png: sportsPng,
+    webp: sportsWebp
+  }
 }

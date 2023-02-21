@@ -34,5 +34,15 @@ export const backgrounds = {
     mobile: technologyMobile,
     tablet: technologyTablet,
     desktop: technologyDesktop
+  },
+  planets : {
+    mobile: destinationMobile,
+    tablet: destinationTablet,
+    desktop: destinationDesktop
+  },
+  shows: {
+    mobile: technologyMobile,
+    tablet: technologyTablet,
+    desktop: technologyDesktop
   }
 }

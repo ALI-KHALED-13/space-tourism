@@ -11,7 +11,7 @@ const Destinations =({data, pageOrder})=> {
 
   const {InfoCarousel, MediaCarousel, slideTo, slideInView} = useCarousel();
 
-  useUpdateTitle("Destinations");
+  useUpdateTitle(data.title);
   
   return (
     <SpaceSection order={pageOrder} title={data.title}>
@@ -19,7 +19,7 @@ const Destinations =({data, pageOrder})=> {
 
         <MediaCarousel>
           {data.slides.map((slide, idx)=> {
-            const desktopVariant = slide.images.desktop.split(".").reduce((obj, key)=> obj[key] , assets);
+            const desktopVariant = slide.images.desktop?.split(".").reduce((obj, key)=> obj[key] , assets);
             const mobileVariant = slide.images.mobile.split(".").reduce((obj, key)=> obj[key] , assets);
 
             return (
@@ -57,19 +57,22 @@ const Destinations =({data, pageOrder})=> {
                   {slide.description}
                 </StyledParagraph>
               </div>
-              <hr />
-              <StyledStatsWrapper>
-                {slide.stats.map((stat, idx)=> {
-                  const [statKey, statValue] = stat;
-                  return (
-                    <div key={statValue + idx}>
-                       <Subheading2 color="spaceBlue">{statKey}</Subheading2>
-                       <Heading4>{statValue}</Heading4>
-                    </div>
-                  )
-                })}
-              </StyledStatsWrapper>
-              
+              {slide.stats && (
+                <>
+                <hr />
+                <StyledStatsWrapper>
+                  {slide.stats?.map((stat, idx)=> {
+                    const [statKey, statValue] = stat;
+                    return (
+                      <div key={statValue + idx}>
+                         <Subheading2 color="spaceBlue">{statKey}</Subheading2>
+                         <Heading4>{statValue}</Heading4>
+                      </div>
+                    )
+                  })}
+                </StyledStatsWrapper>
+                </>
+              )}
             </StyledSlidingDiv>      
           ))}
 

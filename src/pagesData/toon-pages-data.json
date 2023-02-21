@@ -1,0 +1,377 @@
+[ 
+  {
+    "comp": "Home",
+    "pageTpl" : "introductory",
+    "href": {
+      "path": "/",
+      "display": "home"
+    },
+    "data": {
+      "nextPagePath" : "/planets",
+      "exploreBtnText": "revisit",
+      "blocks": [
+        {
+          "comp": "Heading2",
+          "props": {
+            "children": "so, you might still remember"
+          }
+        },
+        {
+          "comp": "Heading3",
+          "props": {
+            "children": "SPACETOON",
+            "L": true,
+            "style": {
+              "backgroundImage": "linear-gradient(to right, yellow 55%, red 65%, green 75%, orange 85%, blue)",
+              "WebkitBackgroundClip": "text",
+              "MozBackgroundClip": "text",
+              "color": "transparent",
+              "textShadow": "1px 1px 5px white",
+              "margin": "1rem"
+            }
+          }
+        },
+        {
+          "comp": "StyledParagraph",
+          "props": {
+            "children": "Let’s admit it; Most 90s Arab kids were raised watching this great cartoon channel. if you want to travel back in time to your childhood and get a strong nostalgia hit, Well sit back, and relax because we’ll give you a really fun experience! 😁"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "comp": "Destinations",
+    "pageTpl" : "Infographic",
+    "href": {
+      "path": "/planets",
+      "display": "planets"
+    },
+    "data": {
+      "title": "Explore the planets",
+      "carouselType": "nomial",
+      "slides": [
+        { 
+         "name": "action",
+          "images": {
+            "mobile": "destinations.action.webp",
+            "desktop": "destinations.action.png"
+          },
+          "headers": [
+            {
+              "comp": "Heading3",
+              "props": {
+                "L": true,
+                "children": "action",
+                "style": {
+                  "textShadow": "3px 4px 5px #d580ff"
+                }
+              }
+            }
+          ],
+          "description": "The planet with the most shows, and by far the coolest intro song. Explore this planet and expect a thrilling, breath-taking baba-yega experience with exciting an attention-capturing shows"
+        },
+        { 
+         "name": "adventure",
+          "images": {
+            "mobile": "destinations.adventure.webp",
+            "desktop": "destinations.adventure.png"
+          },
+          "headers": [
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "adventure",
+                "L": true,
+                "style": {
+                  "textShadow": "4px 4px 5px #04fc04"
+                }
+              }
+            }
+          ],
+          "description": "shazara and challenging the impossible, Ethara (thriller) and imaginaaaaation. these are the words of the intro song of this planet, and they perfectly describe it. Expect not only fun adventures from the shows of the planet, but also the lessons you will learn from them!"
+        },
+        { 
+         "name": "comedia",
+          "images": {
+            "mobile": "destinations.comedia.webp",
+            "desktop": "destinations.comedia.png"
+          },
+          "headers": [
+            {
+              "comp": "Heading3",
+              "props": {
+                "L": true,
+                "children": "comedia",
+                "style": {
+                  "textShadow": "4px 4px 5px orange"
+                }
+              }
+            }
+          ],
+          "description": "ًwhich of us doesn't like the funniest of jokes, or doesn't like anticipation and fun chases. Welcome to the smile, welcome to the laugh. in Comedia the planet of fun, Comedia the planet of surprises!"
+        },
+        { 
+         "name": "sports",
+          "images": {
+            "mobile": "destinations.sports.webp",
+            "desktop": "destinations.sports.png"
+          },
+          "headers": [
+            {
+              "comp": "Heading3",
+              "props": {
+                "L": true,
+                "children": "sports",
+                "style": {
+                  "textShadow": "4px 4px 5px yellow"
+                }
+              }
+            }
+          ],
+          "description": "the planet hosting characters like Hassan and Magid (captain tusbasa) who used to spend episodes to throw or kick a ball and yet, the intro song calls it the planet of speed! However rest assured, there is still fun to be found there :)"
+        }
+      ]
+    }
+  },
+  {
+    "comp": "Technology",
+    "pageTpl" : "Infographic",
+    "href": {
+      "path": "/shows",
+      "display": "shows"
+    },
+    "data":{
+      "title": "Pick your show",
+      "carouselType": "numerical",
+      "slides":[
+        {
+         "name": "slamDunk",
+          "images": {
+            "mobile": "shows.slamDunk.landscape",
+            "desktop": "shows.slamDunk.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "Planet Sports",
+                "style": {
+                  "textShadow": "4px 4px 5px yellow"
+                }
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "slam dunk",
+                "L": true,
+                "color": "#Fa6812",
+                "style": {
+                  "textShadow": "1px -1px 5px white, 3px 3px 7px white"
+                }
+              }
+            }
+          ],
+          "description": "This show is about Hassan (Sakuragi) who joins the basketball team because of the girl he has a crush on and as a result he faces different experinces from funnily dumb, to extremely serious."
+        },
+        {
+         "name": "conan",
+          "images": {
+            "mobile": "shows.conan.landscape",
+            "desktop": "shows.conan.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "Planet Action",
+                "style": {
+                  "textShadow": "4px 4px 5px #d580ff"
+                }
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "Detective Conan",
+                "color": "white",
+                "style": {
+                  "textShadow": "1px -1px 5px blue, 3px 3px 7px blue"
+                }
+              }
+            }
+          ],
+          "description": "The most annoying highschooler in a kid body, who is nosy enough to get into affairs he has no bussiness with in the name of detecting. his bad habit resulted into his current condition of being small in size. throughout the series he tries to capture who assulted him and captures other criminals on the way"
+        },
+        {
+          "name": "friends",
+          "images": {
+            "mobile": "shows.friends.landscape",
+            "desktop": "shows.friends.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "Planet Adventure",
+                "style": {
+                  "textShadow": "4px 4px 5px #04fc04"
+                }
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "the friends' vow",
+                "color": "#35ab65",
+                "style": {
+                  "textShadow": "1px -1px 5px white, 3px 3px 7px white"
+                }
+              }
+            }
+          ],
+          "description": "Universally known as `Romeo's Blue Skies` is The adventures of a young Swiss boy working as a chimney sweeper in Milan. He tries to make his way from poverty but get into fights with street gangs midway"
+        },
+        {
+          "name": "hunter",
+          "images": {
+            "mobile": "shows.hunter.landscape",
+            "desktop": "shows.hunter.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "Planet Adventure",
+                "style": {
+                  "textShadow": "4px 4px 5px #04fc04"
+                }
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "Hunter x Hunter",
+                "style": {
+                  "textShadow": "1px -1px 5px #58228c, 3px 3px 7px #58228c"
+                }
+              }
+            }
+          ],
+          "description": "Gon Freecss aspires to become a Hunter, an exceptional being capable of greatness. With his friends and his potential, he seeks out his father, who left him when he was younger. one of the best anime shows ever (my website my opinion 😜)"
+        },
+        {
+          "name": "zoro",
+          "images": {
+            "mobile": "shows.zoro.landscape",
+            "desktop": "shows.zoro.portrait"
+          },
+          "headers": [
+            {
+              "comp": "Subheading2",
+              "props": {
+                "children": "Planet Action",
+                "style": {
+                  "textShadow": "4px 4px 5px #d580ff"
+                }
+              }
+            },
+            {
+              "comp": "Heading3",
+              "props": {
+                "children": "zorro",
+                "L": true,
+                "color": "#494a4f",
+                "style": {
+                  "textShadow": "1px -1px 5px white, 3px 3px 7px white"
+                }
+              }
+            }
+          ],
+          "description": "masked, hidden, working from the dark to serve the light. Zoro opposes the corrupt tyrants of Spanish California with the help of his beautifully black horse, Tornado, as the masked swordsman, Zorro."
+        }
+      ]
+    }
+  },
+  {
+    "comp": "Crew",
+    "pageTpl" : "Infographic",
+    "href": {
+      "path": "/crew",
+      "display": "crew"
+    },
+    "data":{
+      "title": "known figures",
+      "carouselType": "dots",
+      "slides":[
+          {
+           "name": "Tarek",
+            "images": {
+              "mobile": "crew.tarek.webp"
+            },
+            "headers": [
+              {
+                "comp": "Subheading1",
+                "props": {
+                  "children": "voice-over, singer and actor",
+                  "style": {"color": "white", "opacity": 0.5}
+                }
+              },
+              {
+                "comp": "Heading3",
+                "props": {
+                  "children": "Tarek Alaraby"
+                }
+              }
+            ],
+            "description": "Tarek Alarabi Tourgane is a Syrian composer and singer of Algerian descent, best known for composing the theme songs for animated series in the Arab world like Hazeem alRa'ad and voice-overing many characters and roles."
+          },
+          {
+           "name": "Rasha",
+            "images": {
+              "mobile": "crew.rasha.webp"
+            },
+            "headers": [
+              {
+                "comp": "Subheading1",
+                "props": {
+                  "children": "Singer and song writer",
+                  "style": {"color": "white", "opacity": 0.5}
+                }
+              },
+              {
+                "comp": "Heading3",
+                "props": {
+                  "children": "Rasha Rizk"
+                }
+              }
+            ],
+            "description": "Rasha Rizk is a Syrian singer-songwriter. I would describe her as the golden voice! She shaped our childhood with her beautiful singing. singing the Arabic theme songs for popular cartoons/anime such as: Remi, Detective Conan and the Digimon Series."
+          },
+          {
+           "name": "mamoun",
+            "images": {
+              "mobile": "crew.mamoun.webp"
+            },
+            "headers": [
+              {
+                "comp": "Subheading1",
+                "props": {
+                  "children": "actor and voice-over",
+                  "style": {"color": "white", "opacity": 0.5}
+                }
+              },
+              {
+                "comp": "Heading3",
+                "props": {
+                  "children": "Mamoon al-Farkh"
+                }
+              }
+            ],
+            "description": "Mamoon al-Farkh was a Syrian television, theatre and voice actor who worked on several Dubbing roles such as Detective Conan as Shin'ichi Kudo and Dragon Ball Z – Yamcha (first voice) Turtle"
+          }
+      ]
+    }
+  }
+]

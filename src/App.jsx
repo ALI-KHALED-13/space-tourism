@@ -1,10 +1,12 @@
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Routes, Route, useLocation} from 'react-router-dom'
 import {ThemeProvider} from 'styled-components'
+import logo from "./assets/shared/logo.svg";
+import toonlogo from "./assets/shared/StoonLogo.png";
 import SpaceHeader from './components/SpaceHeader'
 import GlobalStyles, { colors } from './GlobalStyles';
-import appPages from './pages-data.json';
+import {pagesData} from './pagesData';
 import { Home } from './pages/Home';
 import { SpaceLoader } from './components/SpaceLoader';
 const Crew = React.lazy(()=> import('./pages/Crew'));
@@ -16,12 +18,16 @@ const Technology = React.lazy(()=> import('./pages/Technology'));
   * error boundry?
   * one last check for page merging
   * testing: cypress, unit for getCommonParent?
-  * solidify the configs and spacetoon
 */
 
 
 function App() {
   const {pathname} = useLocation();
+  const [websiteWorld, setWebsiteWorld] = useState("toon");
+
+  const logos = {"real": logo, "toon": toonlogo};
+  const appPages = pagesData[websiteWorld];
+  const appLogo = logos[websiteWorld];
 
   const pagesComps = {Crew, Destinations, Technology, Home};
 
@@ -29,7 +35,8 @@ function App() {
     <ThemeProvider theme={{colors}}>
       <GlobalStyles page={pathname === "/"? "home": pathname.slice(1)} />
   
-      <SpaceHeader appPages={appPages}/>
+      <SpaceHeader appPages={appPages} logo={appLogo}/>
+
       <Suspense fallback={<SpaceLoader />}>
         <Routes>         
           {appPages.map((page, idx)=> {
@@ -38,7 +45,11 @@ function App() {
               <Route
                 key={page.comp + idx}
                 path={page.href.path}
-                element={<Comp data={page.data} pageOrder={idx}/>}
+                element={<Comp
+                  data={page.data}
+                  pageOrder={idx}
+                  {...(page.href.path === "/"? { websiteWorld, setWebsiteWorld}:{})}
+                />}
               />
             )
           })}  
