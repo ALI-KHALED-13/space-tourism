@@ -18,7 +18,6 @@ const Technology = React.lazy(()=> import('./pages/Technology'));
   * error boundry?
   * one last check for page merging
   * testing: cypress, unit for getCommonParent?
-  * solidify the configs and spacetoon
 */
 
 
@@ -46,7 +45,11 @@ function App() {
               <Route
                 key={page.comp + idx}
                 path={page.href.path}
-                element={<Comp data={page.data} pageOrder={idx}/>}
+                element={<Comp
+                  data={page.data}
+                  pageOrder={idx}
+                  {...(page.href.path === "/"? { websiteWorld, setWebsiteWorld}:{})}
+                />}
               />
             )
           })}  
