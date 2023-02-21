@@ -28,6 +28,7 @@ export const useCarousel =(direction = "horizontal", breakPoint = 0)=> {
         carouselRef.current.forEach(elm=> {
           elm.style.height = "auto";
           elm.style.display = "flex";
+          for (let child of elm.children) child.style.border = "none";
         })
       }
       setTimeout(()=> slideTo(slideInView), 500); // for titlting and screenSize changes adjustments
@@ -35,17 +36,20 @@ export const useCarousel =(direction = "horizontal", breakPoint = 0)=> {
   }, [carouselRef.current, screenWidth])
 
   function slideTo (idx) {
-    carouselRef.current.forEach(elm=> elm.scroll({
-      behavior: "smooth",
-      ...(direction === "vertical" && screenWidth > breakPoint?
-        {top: idx * elm.offsetHeight}
-      :
-        {left: idx * elm.offsetWidth}
-      )
-     }))
+    carouselRef.current.forEach(elm=> {
+      elm.scroll({
+        behavior: "smooth",
+        ...(direction === "vertical" && screenWidth > breakPoint?
+          {top: idx * elm.offsetHeight}
+        :
+          {left: idx * elm.offsetWidth}
+        )
+      })
+    })
     
     setSlideinView(idx)
   }
+
   const carouselEssentialStyles = {
     width: "100%",
     overflow: "hidden",
@@ -76,31 +80,40 @@ export const useCarousel =(direction = "horizontal", breakPoint = 0)=> {
   return {InfoCarousel, MediaCarousel, slideTo, slideInView};
 }
 
+const equalizeHeight = (targetHeight, parent)=>{
+  parent.style.height = targetHeight + "px";
+  for (let child of parent.children){
+    if (child.clientHeight === targetHeight) continue;
+    let heightCompenstation = targetHeight - child.clientHeight;
+    //compensating to the bordersand not margins, since margins tend to overlap.
+    child.style.borderTop =  (heightCompenstation) / 2 + "px solid transparent";
+    child.style.borderBottom =  (heightCompenstation) / 2 + "px solid transparent";
+  }
+
+}
+
 const setInfoCarouselHeight =(infoCarousel)=> {
   infoCarousel.style.display = "block";//not flex any longer
 
-  const tallestChildHeight = Math.max.apply(null, [...infoCarousel.children].map(child=> child.offsetHeight));
-  infoCarousel.style.height = tallestChildHeight + "px";
-  for (let child of infoCarousel.children){
-    if (child.offsetHeight === tallestChildHeight) continue;
-    
-    child.style.marginTop =  (tallestChildHeight - child.offsetHeight) / 1.8 + "px";
-    child.style.marginBottom =  (tallestChildHeight - child.offsetHeight) / 1.8 + "px";
-  }
+  const tallestChildHeight = Math.max.apply(null, [...infoCarousel.children].map(child=> child.clientHeight));
+
+  equalizeHeight(tallestChildHeight, infoCarousel);
+
 }
 
 const setMediaCarouselHeight =(mediaCarousel)=>{
-  mediaCarousel.style.display = "grid";
-  mediaCarousel.style.gridAutoRows = "1fr";
-  
-  const largestImage = [...mediaCarousel.getElementsByTagName("img")].sort((img1, img2)=> {
-    return img2.naturalHeight - img1.naturalHeight
-  })[0];
-  if (largestImage.complete) {
-    mediaCarousel.style.height = mediaCarousel.firstChild.offsetHeight  + "px";
+  mediaCarousel.style.display = "block";
+
+  const images = [...mediaCarousel.getElementsByTagName("img")];
+  const loadedImages = images.filter(img=> img.complete);
+
+  if (loadedImages.length !== images.length){
+    images.find(img=> !img.complete).onload =()=> setMediaCarouselHeight(mediaCarousel);
   } else {
-    largestImage.onload =()=>{
-      mediaCarousel.style.height = mediaCarousel.firstChild.offsetHeight  + "px";
-    }
+    const pictures = [...mediaCarousel.getElementsByTagName("picture")];
+    const tallestImageHeight = Math.max.apply(null, pictures.map(pic=> pic.clientHeight));
+    
+    equalizeHeight(tallestImageHeight, mediaCarousel);
   }
+  
 }

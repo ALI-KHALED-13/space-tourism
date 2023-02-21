@@ -19,10 +19,8 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledLogo = styled.img`
-  width: 4rem;
   height: 4rem;
   ${mediaQuery("md")}{
-    width: 4.8rem;
     height: 4.8rem;
     margin-left: 4rem;
   }

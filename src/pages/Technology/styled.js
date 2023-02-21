@@ -31,7 +31,7 @@ export const StyledContainer = styled.div`
 
   ${mediaQuery("lg")}{
     padding-bottom: 10rem;
-    grid-template-columns: 1fr 4.5fr 4.5fr;
+    grid-template-columns: 1fr 4.5fr 4fr;
     align-items: center;
     justify-items: start;
     column-gap: 8rem;

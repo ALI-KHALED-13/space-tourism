@@ -19,6 +19,7 @@ export const StyledContainer = styled.div`
     margin: 6.5rem auto;
     justify-items: start;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 9fr;
     column-gap: 12rem;
 
     & .mediaCarousel {
