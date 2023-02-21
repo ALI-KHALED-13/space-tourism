@@ -30,6 +30,7 @@ export const StyledContainer = styled.div`
   }
 
   ${mediaQuery("lg")}{
+    max-width: 130rem;
     padding-bottom: 10rem;
     grid-template-columns: 1fr 4.5fr 4fr;
     align-items: center;

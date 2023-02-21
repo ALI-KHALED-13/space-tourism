@@ -67,16 +67,16 @@
           "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!"
         },
         { 
-         "name": "adventures",
+         "name": "adventure",
           "images": {
-            "mobile": "destinations.adventures.webp",
-            "desktop": "destinations.adventures.png"
+            "mobile": "destinations.adventure.webp",
+            "desktop": "destinations.adventure.png"
           },
           "headers": [
             {
               "comp": "Heading3",
               "props": {
-                "children": "adventures",
+                "children": "adventure",
                 "L": true
               }
             }

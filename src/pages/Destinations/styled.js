@@ -15,7 +15,7 @@ export const StyledContainer = styled.div`
     gap: 3rem;
   }
   ${mediaQuery("lg")}{
-    max-width: unset;
+    max-width: 130rem;
     margin: 6.5rem auto;
     justify-items: start;
     grid-template-columns: 1fr 1fr;

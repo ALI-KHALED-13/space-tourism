@@ -44,7 +44,7 @@ export default {
     png: actionPng,
     webp: actionWebp
   },
-  adventures: {
+  adventure: {
     png: adventuresPng,
     webp: adventuresWebp
   },
