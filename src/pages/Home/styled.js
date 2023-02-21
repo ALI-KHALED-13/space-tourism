@@ -80,7 +80,7 @@ export const StyledExploreButton = styled.button`
 
 export const StyledSwitchBtn = styled.button`
   position: fixed;
-  top: 60vh;
+  top: 65vh;
   left: 1vw;
   font-family: ${({world})=> world === "toon"? "Georgia, serif":"'Brush Script MT', cursive"};
   font-size: 1.5rem;

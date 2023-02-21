@@ -23,7 +23,7 @@ const Technology = React.lazy(()=> import('./pages/Technology'));
 
 function App() {
   const {pathname} = useLocation();
-  const [websiteWorld, setWebsiteWorld] = useState("toon");
+  const [websiteWorld, setWebsiteWorld] = useState("real");
 
   const logos = {"real": logo, "toon": toonlogo};
   const appPages = pagesData[websiteWorld];

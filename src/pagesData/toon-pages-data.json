@@ -20,9 +20,8 @@
           "comp": "Heading3",
           "props": {
             "children": "SPACETOON",
-            "L": true,
             "style": {
-              "backgroundImage": "linear-gradient(to right, yellow 55%, red 65%, green 75%, orange 85%, blue)",
+              "backgroundImage": "linear-gradient(to right, yellow 50%, red 12%, green, orange, blue)",
               "WebkitBackgroundClip": "text",
               "MozBackgroundClip": "text",
               "color": "transparent",
@@ -72,19 +71,20 @@
           "description": "The planet with the most shows, and by far the coolest intro song. Explore this planet and expect a thrilling, breath-taking baba-yega experience with exciting an attention-capturing shows"
         },
         { 
-         "name": "adventure",
+         "name": "adventures",
           "images": {
-            "mobile": "destinations.adventure.webp",
-            "desktop": "destinations.adventure.png"
+            "mobile": "destinations.adventures.webp",
+            "desktop": "destinations.adventures.png"
           },
           "headers": [
             {
               "comp": "Heading3",
               "props": {
-                "children": "adventure",
-                "L": true,
+                "children": "adventures",
                 "style": {
-                  "textShadow": "4px 4px 5px #04fc04"
+                  "textShadow": "4px 4px 5px #04fc04",
+                  "margin": "1rem",
+                  "transform": "scaleY(1.4)"
                 }
               }
             }
