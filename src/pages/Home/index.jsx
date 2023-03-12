@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/shared/logo.svg";
+import toonlogo from "../../assets/shared/StoonLogo.png";
 import * as typos from "../../components/Typo";
 import { StyledExploreButton, StyledSection, StyledHalo, StyledSwitchBtn} from "./styled";
 
@@ -17,7 +19,11 @@ export const Home =({ data, websiteWorld, setWebsiteWorld})=> {
         })}
       </div>
       <StyledSwitchBtn onClick={switchRealms} world={websiteWorld}>
-        {websiteWorld == "real"? "Go Cartoonish 👀": "Back to reality 🤵"}
+        <img
+          alt="switch realms"
+          src={websiteWorld == "real"?toonlogo:logo}
+          style={{width: websiteWorld == "real"? "7rem":"5rem"}}
+        />
       </StyledSwitchBtn>
 
       <StyledExploreButton onClick={()=> navigate(data.nextPagePath)}>
