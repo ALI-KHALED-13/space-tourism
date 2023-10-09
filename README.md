@@ -12,7 +12,7 @@ Users should be able to:
 - extra point: mobile users should be able to swipe through the carousel
 
 the challenge is to build out this multi-page space tourism website and get it looking as close to the design as possible.
-choosing to use a JS-heavy approach, I used a local `data.json` configuration file for the different page data. 
+choosing to use a JS-heavy approach, I used a local `data.json` configuration file for the pages data and switching realms. 
 
 ## technologies used
 - React

@@ -8,7 +8,6 @@ import SpaceHeader from './components/SpaceHeader'
 import GlobalStyles, { colors } from './GlobalStyles';
 import {pagesData} from './pagesData';
 import { Home } from './pages/Home';
-import { SpaceLoader } from './components/SpaceLoader';
 const Crew = React.lazy(()=> import('./pages/Crew'));
 const Destinations = React.lazy(()=> import('./pages/Destinations'));
 const Technology = React.lazy(()=> import('./pages/Technology'));
