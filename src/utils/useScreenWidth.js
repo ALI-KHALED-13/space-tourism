@@ -1,13 +1,13 @@
-import { useEffect, useState} from "react";
+import { useEffect, useRef, useState} from "react";
 
 export const useScreenWidth =()=>{
   const [screenWidth, setScreenWidth] = useState(document.documentElement.clientWidth);
 
-  let timerId;
+  const timerId = useRef({current: undefined});
   const updateScreenWidth =()=> {
-    clearTimeout(timerId);
+    clearTimeout(timerId.current);
     
-    timerId = setTimeout(()=> {
+    timerId.current = setTimeout(()=> {
       setScreenWidth(document.documentElement.clientWidth);
     }, 300);
   }

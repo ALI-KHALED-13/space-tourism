@@ -37,7 +37,7 @@ function App() {
   
       <SpaceHeader appPages={appPages} logo={appLogo}/>
 
-      <Suspense fallback={<SpaceLoader />}>
+      <Suspense fallback={<div>loading...</div>}>
         <Routes>         
           {appPages.map((page, idx)=> {
             const Comp = pagesComps[page.comp];
